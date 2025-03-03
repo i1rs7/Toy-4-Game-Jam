@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://78fauy0fihe4"]
+
+[ext_resource type="Script" path="res://game elements/button/button.gd" id="1_1pp1x"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_238k8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0rml3"]
+size = Vector2(1, 1)
+
+[node name="Button" type="Area2D"]
+script = ExtResource("1_1pp1x")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
+mesh = SubResource("BoxMesh_238k8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_0rml3")
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="toggle" from="." to="." method="_on_toggle"]
