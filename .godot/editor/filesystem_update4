@@ -1,0 +1,6 @@
+res://ui/control.tscn
+res://game elements/button/button.tscn
+res://game elements/button/button.gd
+res://game elements/door/door.tscn
+res://game elements/door/door.gd
+res://testing.tscn

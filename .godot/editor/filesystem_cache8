@@ -1,6 +1,18 @@
 ea4bc82a6ad023ab7ee23ee620429895
+<<<<<<< HEAD
 ::res://::1740794475
 control.tscn::PackedScene::9163002144083382445::1740794235::0::1::::<><>::
 index.apple-touch-icon.png::::-1::1740794251::0::0::::<><>::
 index.icon.png::::-1::1740794251::0::0::::<><>::
 index.png::::-1::1740794251::0::0::::<><>::
+=======
+::res://::1741016815
+::res://build/::1741016744
+::res://game elements/::1741016815
+::res://game elements/button/::1741016628
+::res://game elements/player/::1741016599
+::res://game elements/trampoline/::1741016685
+::res://levels/::1741016806
+::res://ui/::1741016733
+control.tscn::PackedScene::3018005249499278759::1741016731::0::1::::<><>::
+>>>>>>> main
