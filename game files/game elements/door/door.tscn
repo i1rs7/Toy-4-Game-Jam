@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://b0is1cl7tnxtv"]
+
+[ext_resource type="Script" path="res://game files/game elements/door/door.gd" id="1_fismi"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_g3q57"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6ss2f"]
+size = Vector2(1, 1)
+
+[node name="door" type="StaticBody2D"]
+script = ExtResource("1_fismi")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
+mesh = SubResource("BoxMesh_g3q57")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_6ss2f")
