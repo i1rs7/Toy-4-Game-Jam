@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://c8g2jmftvtxij"]
+
+[ext_resource type="Script" path="res://game files/game elements/player/player.gd" id="1_f2sc4"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_uuot1"]
+radius = 10.0
+height = 20.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6ni25"]
+
+[node name="Player Manager" type="Node2D"]
+
+[node name="Main" type="CharacterBody2D" parent="."]
+script = ExtResource("1_f2sc4")
+metadata/selected = true
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Main"]
+mesh = SubResource("SphereMesh_uuot1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Main"]
+shape = SubResource("CircleShape2D_6ni25")

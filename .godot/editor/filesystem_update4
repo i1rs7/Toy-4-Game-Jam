@@ -1,1 +1,3 @@
-res://testing.tscn
+res://game files/testing.tscn
+res://game files/game elements/player/player_manager.tscn
+res://game files/game elements/player/player.gd
