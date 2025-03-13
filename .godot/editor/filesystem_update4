@@ -1,3 +1,5 @@
 res://game files/testing.tscn
 res://game files/game elements/player/player_manager.tscn
 res://game files/game elements/player/player.gd
+res://game files/game elements/player/player.tscn
+res://game files/game elements/player/player_manager.gd
