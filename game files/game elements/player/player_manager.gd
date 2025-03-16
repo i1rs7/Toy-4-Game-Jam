@@ -16,12 +16,14 @@ func _process(delta: float) -> void:
 
 func add_branch():
 	var branch = player_scene.instantiate() # create instance
-	# move new player to desired position ******************************************
+	branch.attributes = players[selected_index].attributes.duplicate() # copy attributes over
+	branch.position = players[selected_index].position + Vector2(20,0) # move new player to desired position
 	players.append(branch) # add player ID
+	# note that we must add child before setting meta, I think because the meta is on the node, and not the object or something.
+	add_child(branch) # add new player to children
 	players[selected_index].set_meta("selected", false) # deselect current player
 	selected_index = players.size() - 1 # update selected index to be new player
 	players[selected_index].set_meta("selected", true) # select new player
-	add_child(branch) # add new player to children
 
 func cycle_selection():
 	players[selected_index].set_meta("selected", false) # deselect current player
