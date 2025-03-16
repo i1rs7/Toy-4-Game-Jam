@@ -1,7 +1,17 @@
 [gd_scene load_steps=3 format=3 uid="uid://bposn1y40o5ue"]
 
+<<<<<<< Updated upstream
 [ext_resource type="PackedScene" uid="uid://78fauy0fihe4" path="res://game files/game elements/button/button.tscn" id="1_gboog"]
 [ext_resource type="PackedScene" uid="uid://b0is1cl7tnxtv" path="res://game files/game elements/door/door.tscn" id="2_diw3w"]
+=======
+[ext_resource type="PackedScene" uid="uid://c8g2jmftvtxij" path="res://game files/game elements/player/player_manager.tscn" id="1_u3pjc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_utp5k"]
+size = Vector2(50.6907, 20)
+
+[sub_resource type="BoxMesh" id="BoxMesh_643ja"]
+size = Vector3(20, 20, 1)
+>>>>>>> Stashed changes
 
 [node name="Testing" type="Node2D"]
 
@@ -9,8 +19,21 @@
 position = Vector2(30, 60)
 scale = Vector2(43.505, 43.505)
 
+<<<<<<< Updated upstream
 [node name="door" parent="." instance=ExtResource("2_diw3w")]
 position = Vector2(107.95, 55)
 scale = Vector2(21.885, 21.885)
 
 [connection signal="toggle" from="Button" to="door" method="_on_button_toggle"]
+=======
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(15.3453, 0)
+shape = SubResource("RectangleShape2D_utp5k")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="StaticBody2D"]
+position = Vector2(15.5326, 17.5)
+scale = Vector2(2.55326, 2.75)
+mesh = SubResource("BoxMesh_643ja")
+
+[node name="Player Manager" parent="." instance=ExtResource("1_u3pjc")]
+>>>>>>> Stashed changes
