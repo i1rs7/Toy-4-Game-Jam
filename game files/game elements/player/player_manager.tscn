@@ -7,13 +7,3 @@
 script = ExtResource("1_on8y1")
 
 [node name="player" parent="." instance=ExtResource("2_uwlus")]
-position = Vector2(75, -15)
-
-[node name="player2" parent="." instance=ExtResource("2_uwlus")]
-position = Vector2(46, 27)
-
-[node name="player3" parent="." instance=ExtResource("2_uwlus")]
-position = Vector2(36, -8)
-
-[node name="player4" parent="." instance=ExtResource("2_uwlus")]
-position = Vector2(23, 12)
