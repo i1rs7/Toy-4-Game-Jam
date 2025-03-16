@@ -1,5 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://bposn1y40o5ue"]
+[gd_scene load_steps=6 format=3 uid="uid://bposn1y40o5ue"]
 
+[ext_resource type="PackedScene" uid="uid://bytk1xep64b52" path="res://tile_map.tscn" id="1_creba"]
 [ext_resource type="PackedScene" uid="uid://c8g2jmftvtxij" path="res://game files/game elements/player/player_manager.tscn" id="1_u3pjc"]
 [ext_resource type="PackedScene" uid="uid://c5scq3q0uf8d7" path="res://game files/game elements/key/key.tscn" id="2_px5k3"]
 
@@ -10,14 +11,21 @@ size = Vector3(20, 20, 1)
 
 [node name="Testing" type="Node2D"]
 
+[node name="TileMap" parent="." instance=ExtResource("1_creba")]
+position = Vector2(574, 280)
+scale = Vector2(4.5, 4.5)
+
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
+visible = false
 position = Vector2(200, 500)
 scale = Vector2(24.035, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-0.166424, 211)
 shape = SubResource("RectangleShape2D_utp5k")
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="StaticBody2D"]
+position = Vector2(0.124818, 202)
 mesh = SubResource("BoxMesh_643ja")
 
 [node name="Key" parent="." instance=ExtResource("2_px5k3")]
