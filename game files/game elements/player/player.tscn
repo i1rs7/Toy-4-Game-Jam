@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 [gd_scene load_steps=16 format=3 uid="uid://6embj5fwrr8w"]
 
 [ext_resource type="Script" path="res://game files/game elements/player/player.gd" id="1_mtxyd"]
@@ -93,20 +94,105 @@ size = Vector2(96.75, 59)
 radius = 29.0172
 
 [gd_scene load_steps=4 format=3 uid="uid://6embj5fwrr8w"]
+=======
+[gd_scene load_steps=15 format=3 uid="uid://6embj5fwrr8w"]
+>>>>>>> Stashed changes
 
 [ext_resource type="Script" path="res://game files/game elements/player/player.gd" id="1_mtxyd"]
+[ext_resource type="Texture2D" uid="uid://bvm8mnajinpqe" path="res://game files/game elements/player/player_spritesheet.png" id="2_t8bbg"]
 
-[sub_resource type="SphereMesh" id="SphereMesh_nsmx0"]
-radius = 10.0
-height = 20.0
+[sub_resource type="AtlasTexture" id="AtlasTexture_xeg3x"]
+atlas = ExtResource("2_t8bbg")
+region = Rect2(0, 33, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8nfeu"]
+atlas = ExtResource("2_t8bbg")
+region = Rect2(33, 33, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jl634"]
+atlas = ExtResource("2_t8bbg")
+region = Rect2(66, 33, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_weqnh"]
+atlas = ExtResource("2_t8bbg")
+region = Rect2(99, 33, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yluy1"]
+atlas = ExtResource("2_t8bbg")
+region = Rect2(132, 33, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pv3t1"]
+atlas = ExtResource("2_t8bbg")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lmj24"]
+atlas = ExtResource("2_t8bbg")
+region = Rect2(33, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xbo1w"]
+atlas = ExtResource("2_t8bbg")
+region = Rect2(66, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0efaq"]
+atlas = ExtResource("2_t8bbg")
+region = Rect2(99, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y1dt6"]
+atlas = ExtResource("2_t8bbg")
+region = Rect2(132, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_71lhk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xeg3x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8nfeu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jl634")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_weqnh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yluy1")
+}],
+"loop": true,
+"name": &"move_left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pv3t1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lmj24")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xbo1w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0efaq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y1dt6")
+}],
+"loop": true,
+"name": &"move_right",
+"speed": 5.0
+}]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_rveel"]
+radius = 53.1507
 
 [node name="player" type="CharacterBody2D"]
 script = ExtResource("1_mtxyd")
 
 [node name="cat" type="AnimatedSprite2D" parent="."]
 scale = Vector2(4, 4)
+<<<<<<< Updated upstream
 sprite_frames = SubResource("SpriteFrames_1s67m")
 animation = &"move_left"
 
@@ -121,16 +207,23 @@ shape = SubResource("CircleShape2D_rveel")
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="."]
 mesh = SubResource("SphereMesh_nsmx0")
+=======
+sprite_frames = SubResource("SpriteFrames_71lhk")
+animation = &"move_left"
+>>>>>>> Stashed changes
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-9, 12)
 shape = SubResource("CircleShape2D_rveel")
 
 [node name="PanelContainer" type="PanelContainer" parent="."]
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_right = 1.0
-offset_bottom = 23.0
+offset_left = -62.0
+offset_top = 44.0
+offset_right = 55.0
+offset_bottom = 67.0
 grow_horizontal = 2
 size_flags_horizontal = 6
 size_flags_vertical = 6
