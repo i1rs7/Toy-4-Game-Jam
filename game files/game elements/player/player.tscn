@@ -8,7 +8,7 @@ height = 20.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_rveel"]
 
-[node name="player" type="CharacterBody2D"]
+[node name="player" type="CharacterBody2D" groups=["players"]]
 script = ExtResource("1_mtxyd")
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="."]
