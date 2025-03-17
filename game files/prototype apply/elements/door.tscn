@@ -1,10 +1,24 @@
-[gd_scene load_steps=3 format=3 uid="uid://mfvxnkfd0kye"]
+[gd_scene load_steps=5 format=3 uid="uid://mfvxnkfd0kye"]
+
+[ext_resource type="Texture2D" uid="uid://dmt38v5wy1jpl" path="res://game files/prototype apply/git_tilemap.png" id="1_i0bm7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k3iig"]
 size = Vector2(8, 32)
 
-[sub_resource type="BoxMesh" id="BoxMesh_4xsmb"]
-size = Vector3(8, 32, 0)
+[sub_resource type="AtlasTexture" id="AtlasTexture_tsna6"]
+atlas = ExtResource("1_i0bm7")
+region = Rect2(119, 17, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kf6ok"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tsna6")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Door" type="StaticBody2D" groups=["doors"]]
 
@@ -12,6 +26,7 @@ size = Vector3(8, 32, 0)
 position = Vector2(4, 16)
 shape = SubResource("RectangleShape2D_k3iig")
 
-[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(4, 16)
-mesh = SubResource("BoxMesh_4xsmb")
+scale = Vector2(1, 2)
+sprite_frames = SubResource("SpriteFrames_kf6ok")

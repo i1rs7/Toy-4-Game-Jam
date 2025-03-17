@@ -1,17 +1,73 @@
-[gd_scene load_steps=3 format=3 uid="uid://cd7sgd08m8305"]
+[gd_scene load_steps=11 format=3 uid="uid://cd7sgd08m8305"]
+
+[ext_resource type="Texture2D" uid="uid://dmt38v5wy1jpl" path="res://game files/prototype apply/git_tilemap.png" id="1_d2b2w"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bcjvr"]
-size = Vector2(8, 8)
+size = Vector2(16, 6)
 
-[sub_resource type="BoxMesh" id="BoxMesh_4mn3h"]
-size = Vector3(8, 8, 0)
+[sub_resource type="AtlasTexture" id="AtlasTexture_4lv63"]
+atlas = ExtResource("1_d2b2w")
+region = Rect2(0, 51, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i1mpp"]
+atlas = ExtResource("1_d2b2w")
+region = Rect2(17, 51, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cstqu"]
+atlas = ExtResource("1_d2b2w")
+region = Rect2(34, 51, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_golbe"]
+atlas = ExtResource("1_d2b2w")
+region = Rect2(51, 51, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_giyqm"]
+atlas = ExtResource("1_d2b2w")
+region = Rect2(68, 51, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j4xbf"]
+atlas = ExtResource("1_d2b2w")
+region = Rect2(85, 51, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8jfa1"]
+atlas = ExtResource("1_d2b2w")
+region = Rect2(102, 51, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_73vre"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4lv63")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i1mpp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cstqu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_golbe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_giyqm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j4xbf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8jfa1")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Trampoline" type="StaticBody2D" groups=["trampolines"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(4, 4)
+position = Vector2(5, 5)
 shape = SubResource("RectangleShape2D_bcjvr")
 
-[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
-position = Vector2(4, 4)
-mesh = SubResource("BoxMesh_4mn3h")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(5, 0)
+sprite_frames = SubResource("SpriteFrames_73vre")
