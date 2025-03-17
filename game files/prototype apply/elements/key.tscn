@@ -1,31 +1,40 @@
-[gd_scene load_steps=5 format=3 uid="uid://bvrsb6iwj46bd"]
+[gd_scene load_steps=6 format=3 uid="uid://bvrsb6iwj46bd"]
 
-[ext_resource type="Texture2D" uid="uid://dmt38v5wy1jpl" path="res://game files/prototype apply/git_tilemap.png" id="1_hqyds"]
+[ext_resource type="Texture2D" path="res://game files/prototype apply/initial_item_assets.png" id="1_665s3"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_n76j3"]
-size = Vector2(16, 8)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_mywqc"]
-atlas = ExtResource("1_hqyds")
+[sub_resource type="AtlasTexture" id="AtlasTexture_rdfk8"]
+atlas = ExtResource("1_665s3")
 region = Rect2(119, 51, 16, 16)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_d2rrq"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_3wul0"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_mywqc")
+"texture": SubResource("AtlasTexture_rdfk8")
 }],
 "loop": true,
 "name": &"default",
 "speed": 5.0
 }]
 
-[node name="Key" type="StaticBody2D" groups=["keys"]]
-scale = Vector2(0.75, 0.75)
+[sub_resource type="CircleShape2D" id="CircleShape2D_3k34w"]
+radius = 2.5
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -1)
-shape = SubResource("RectangleShape2D_n76j3")
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6xwbm"]
+radius = 3.0
+height = 10.0
+
+[node name="Key" type="StaticBody2D" groups=["keys"]]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-sprite_frames = SubResource("SpriteFrames_d2rrq")
+sprite_frames = SubResource("SpriteFrames_3wul0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-5, -1)
+scale = Vector2(2, 2)
+shape = SubResource("CircleShape2D_3k34w")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(4, 0)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_6xwbm")

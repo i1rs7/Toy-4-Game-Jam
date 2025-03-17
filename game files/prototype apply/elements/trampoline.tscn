@@ -1,73 +1,105 @@
-[gd_scene load_steps=11 format=3 uid="uid://cd7sgd08m8305"]
+[gd_scene load_steps=14 format=3 uid="uid://cd7sgd08m8305"]
 
-[ext_resource type="Texture2D" uid="uid://dmt38v5wy1jpl" path="res://game files/prototype apply/git_tilemap.png" id="1_d2b2w"]
+[ext_resource type="Script" path="res://game files/prototype apply/elements/trampoline.gd" id="1_cygse"]
+[ext_resource type="Texture2D" path="res://game files/prototype apply/initial_item_assets.png" id="2_wq2n8"]
+[ext_resource type="BoxMesh" path="res://green.tres" id="3_vsqvp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bcjvr"]
-size = Vector2(16, 6)
+size = Vector2(8, 3)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_4lv63"]
-atlas = ExtResource("1_d2b2w")
+[sub_resource type="AtlasTexture" id="AtlasTexture_fk7es"]
+atlas = ExtResource("2_wq2n8")
 region = Rect2(0, 51, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_i1mpp"]
-atlas = ExtResource("1_d2b2w")
+[sub_resource type="AtlasTexture" id="AtlasTexture_fr6yh"]
+atlas = ExtResource("2_wq2n8")
 region = Rect2(17, 51, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_cstqu"]
-atlas = ExtResource("1_d2b2w")
+[sub_resource type="AtlasTexture" id="AtlasTexture_tkb5p"]
+atlas = ExtResource("2_wq2n8")
 region = Rect2(34, 51, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_golbe"]
-atlas = ExtResource("1_d2b2w")
+[sub_resource type="AtlasTexture" id="AtlasTexture_7383y"]
+atlas = ExtResource("2_wq2n8")
 region = Rect2(51, 51, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_giyqm"]
-atlas = ExtResource("1_d2b2w")
+[sub_resource type="AtlasTexture" id="AtlasTexture_71r5d"]
+atlas = ExtResource("2_wq2n8")
 region = Rect2(68, 51, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_j4xbf"]
-atlas = ExtResource("1_d2b2w")
+[sub_resource type="AtlasTexture" id="AtlasTexture_8yij5"]
+atlas = ExtResource("2_wq2n8")
 region = Rect2(85, 51, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_8jfa1"]
-atlas = ExtResource("1_d2b2w")
+[sub_resource type="AtlasTexture" id="AtlasTexture_xhngl"]
+atlas = ExtResource("2_wq2n8")
 region = Rect2(102, 51, 16, 16)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_73vre"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_sc1im"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_4lv63")
+"texture": SubResource("AtlasTexture_fk7es")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_i1mpp")
+"texture": SubResource("AtlasTexture_fr6yh")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_cstqu")
+"texture": SubResource("AtlasTexture_tkb5p")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_golbe")
+"texture": SubResource("AtlasTexture_7383y")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_giyqm")
+"texture": SubResource("AtlasTexture_71r5d")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_j4xbf")
+"texture": SubResource("AtlasTexture_8yij5")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_8jfa1")
+"texture": SubResource("AtlasTexture_xhngl")
 }],
-"loop": true,
+"loop": false,
 "name": &"default",
-"speed": 5.0
+"speed": 6.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4k5w7"]
+size = Vector2(11, 5)
+
 [node name="Trampoline" type="StaticBody2D" groups=["trampolines"]]
+script = ExtResource("1_cygse")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(5, 5)
+position = Vector2(4, 1.5)
 shape = SubResource("RectangleShape2D_bcjvr")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(5, 0)
-sprite_frames = SubResource("SpriteFrames_73vre")
+visible = false
+position = Vector2(4, -1)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_sc1im")
+
+[node name="DisableBoxTop" type="MeshInstance2D" parent="."]
+self_modulate = Color(0.133333, 0.694118, 0.298039, 1)
+position = Vector2(4, -1)
+scale = Vector2(11.375, 1)
+mesh = ExtResource("3_vsqvp")
+
+[node name="DisableBoxRight" type="MeshInstance2D" parent="."]
+self_modulate = Color(0.133333, 0.694118, 0.298039, 1)
+position = Vector2(9, 1.37032)
+rotation = 1.5708
+scale = Vector2(3.7894, 1)
+mesh = ExtResource("3_vsqvp")
+
+[node name="DisableBoxLeft" type="MeshInstance2D" parent="."]
+self_modulate = Color(0.133333, 0.694118, 0.298039, 1)
+position = Vector2(-1, 1.37744)
+rotation = 1.5708
+scale = Vector2(3.77516, 1)
+mesh = ExtResource("3_vsqvp")
+
+[node name="DisableBoxCollision" type="CollisionShape2D" parent="."]
+position = Vector2(4, 1)
+shape = SubResource("RectangleShape2D_4k5w7")
