@@ -30,10 +30,10 @@ func handle_collisions():
 		if collision == null: continue
 		var collider = collision.get_collider()
 		if collider.is_in_group("doors") and get_meta("key"):
-			collider.queue_free()
+			collider.state = false
 			set_meta("key", false)
 		elif collider.is_in_group("keys"):
 			collider.queue_free()
 			set_meta("key", true)
-		elif collider.is_in_group("trampolines") and position.y < collider.position.y:
+		elif collider.is_in_group("trampolines") and collider.state and position.y < collider.position.y:
 			velocity.y = TRAMP_BOUNCE_VELOCITY

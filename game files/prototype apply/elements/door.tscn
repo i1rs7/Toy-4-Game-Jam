@@ -1,17 +1,31 @@
-[gd_scene load_steps=3 format=3 uid="uid://mfvxnkfd0kye"]
+[gd_scene load_steps=6 format=3 uid="uid://mfvxnkfd0kye"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_k3iig"]
-size = Vector2(8, 32)
+[ext_resource type="Script" path="res://game files/prototype apply/elements/door.gd" id="1_76o3w"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_4xsmb"]
 size = Vector3(8, 32, 0)
 
+[sub_resource type="BoxMesh" id="BoxMesh_gyonf"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_j5470"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k3iig"]
+size = Vector2(8, 32)
+
 [node name="Door" type="StaticBody2D" groups=["doors"]]
+script = ExtResource("1_76o3w")
+
+[node name="EnabledMesh" type="MeshInstance2D" parent="."]
+position = Vector2(4, 16)
+mesh = SubResource("BoxMesh_4xsmb")
+
+[node name="DisabledMesh" type="MeshInstance2D" parent="."]
+visible = false
+position = Vector2(4, 16)
+scale = Vector2(8, 32)
+mesh = SubResource("BoxMesh_gyonf")
+texture = SubResource("ViewportTexture_j5470")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(4, 16)
 shape = SubResource("RectangleShape2D_k3iig")
-
-[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
-position = Vector2(4, 16)
-mesh = SubResource("BoxMesh_4xsmb")

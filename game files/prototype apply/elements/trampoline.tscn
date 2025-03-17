@@ -1,17 +1,31 @@
-[gd_scene load_steps=3 format=3 uid="uid://cd7sgd08m8305"]
+[gd_scene load_steps=6 format=3 uid="uid://cd7sgd08m8305"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_bcjvr"]
-size = Vector2(8, 8)
+[ext_resource type="Script" path="res://game files/prototype apply/elements/trampoline.gd" id="1_cygse"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_4mn3h"]
 size = Vector3(8, 8, 0)
 
+[sub_resource type="BoxMesh" id="BoxMesh_wjs5c"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_ef7om"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bcjvr"]
+size = Vector2(8, 8)
+
 [node name="Trampoline" type="StaticBody2D" groups=["trampolines"]]
+script = ExtResource("1_cygse")
+
+[node name="EnabledMesh" type="MeshInstance2D" parent="."]
+position = Vector2(4, 4)
+mesh = SubResource("BoxMesh_4mn3h")
+
+[node name="DisabledMesh" type="MeshInstance2D" parent="."]
+visible = false
+position = Vector2(4, 4)
+scale = Vector2(8, 8)
+mesh = SubResource("BoxMesh_wjs5c")
+texture = SubResource("ViewportTexture_ef7om")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(4, 4)
 shape = SubResource("RectangleShape2D_bcjvr")
-
-[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
-position = Vector2(4, 4)
-mesh = SubResource("BoxMesh_4mn3h")
