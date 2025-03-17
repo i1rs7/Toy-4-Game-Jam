@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dwtsylfvti68l"]
+
+[ext_resource type="PackedScene" uid="uid://2ds76dy3kf4n" path="res://game files/prototype apply/levels/level 1.tscn" id="1_b1xhi"]
+
+[node name="Game" type="Node2D"]
+
+[node name="Level1" parent="." instance=ExtResource("1_b1xhi")]
+scale = Vector2(4, 4)

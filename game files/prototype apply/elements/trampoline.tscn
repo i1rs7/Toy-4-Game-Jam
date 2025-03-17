@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://cd7sgd08m8305"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bcjvr"]
+size = Vector2(8, 8)
+
+[sub_resource type="BoxMesh" id="BoxMesh_4mn3h"]
+size = Vector3(8, 8, 0)
+
+[node name="Trampoline" type="StaticBody2D" groups=["trampolines"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(4, 4)
+shape = SubResource("RectangleShape2D_bcjvr")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
+position = Vector2(4, 4)
+mesh = SubResource("BoxMesh_4mn3h")
