@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://bvrsb6iwj46bd"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3k34w"]
+radius = 2.0
+
+[sub_resource type="SphereMesh" id="SphereMesh_tvnqt"]
+radius = 2.0
+height = 4.0
+
+[node name="Key" type="StaticBody2D" groups=["keys"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_3k34w")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
+mesh = SubResource("SphereMesh_tvnqt")

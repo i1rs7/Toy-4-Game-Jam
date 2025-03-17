@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://mfvxnkfd0kye"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k3iig"]
+size = Vector2(8, 32)
+
+[sub_resource type="BoxMesh" id="BoxMesh_4xsmb"]
+size = Vector3(8, 32, 0)
+
+[node name="Door" type="StaticBody2D" groups=["doors"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(4, 16)
+shape = SubResource("RectangleShape2D_k3iig")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
+position = Vector2(4, 16)
+mesh = SubResource("BoxMesh_4xsmb")

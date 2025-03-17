@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://boo6h7l4j7vwa"]
+
+[ext_resource type="Script" path="res://game files/prototype apply/player/player types/player.gd" id="1_wi4we"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_pvxh6"]
+radius = 4.0
+
+[sub_resource type="SphereMesh" id="SphereMesh_krqm6"]
+radius = 4.0
+height = 8.0
+
+[node name="Octopus" type="CharacterBody2D"]
+script = ExtResource("1_wi4we")
+metadata/key = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_pvxh6")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
+mesh = SubResource("SphereMesh_krqm6")
+
+[node name="Label" type="Label" parent="."]
+offset_right = 62.0
+offset_bottom = 23.0
+text = "octopus"
+
+[connection signal="ready" from="." to="." method="_on_ready"]

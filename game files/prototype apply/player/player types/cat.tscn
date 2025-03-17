@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://dpqxu2y4owalb"]
+
+[ext_resource type="Script" path="res://game files/prototype apply/player/player types/player.gd" id="1_2s6qv"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_yytgx"]
+radius = 4.0
+
+[sub_resource type="SphereMesh" id="SphereMesh_ceybm"]
+radius = 4.0
+height = 8.0
+
+[node name="Cat" type="CharacterBody2D"]
+script = ExtResource("1_2s6qv")
+metadata/key = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_yytgx")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
+mesh = SubResource("SphereMesh_ceybm")
+
+[node name="Label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "cat"
+
+[connection signal="ready" from="." to="." method="_on_ready"]
