@@ -94,6 +94,11 @@ script = ExtResource("1_fm6sl")
 metadata/key = false
 metadata/selected = true
 
+[node name="Label" type="Label" parent="."]
+offset_right = 58.0
+offset_bottom = 23.0
+text = "octocat"
+
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.6, 0.6)
 sprite_frames = SubResource("SpriteFrames_rtuh3")

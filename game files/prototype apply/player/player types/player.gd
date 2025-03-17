@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 
 const SPEED = 300.0
-const JUMP_VELOCITY = -450.0
+const JUMP_VELOCITY = -400.0
 const TRAMP_BOUNCE_VELOCITY = -575.0
 
 func _on_ready() -> void:
