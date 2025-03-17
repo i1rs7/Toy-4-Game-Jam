@@ -96,11 +96,6 @@ size = Vector2(15.5, 10)
 script = ExtResource("1_2s6qv")
 metadata/key = false
 
-[node name="Label" type="Label" parent="."]
-offset_right = 40.0
-offset_bottom = 23.0
-text = "cat"
-
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.6, 0.6)
 sprite_frames = SubResource("SpriteFrames_cwkkw")
