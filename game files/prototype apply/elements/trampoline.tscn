@@ -1,7 +1,7 @@
 [gd_scene load_steps=16 format=3 uid="uid://cd7sgd08m8305"]
 
 [ext_resource type="Script" path="res://game files/prototype apply/elements/trampoline.gd" id="1_cygse"]
-[ext_resource type="Texture2D" uid="uid://dmt38v5wy1jpl" path="res://game files/prototype apply/initial_item_assets.png" id="2_wq2n8"]
+[ext_resource type="Texture2D" uid="uid://dmt38v5wy1jpl" path="res://game files/prototype apply/elements/initial_item_assets.png" id="2_wq2n8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bcjvr"]
 size = Vector2(8, 3)

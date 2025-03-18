@@ -1,7 +1,7 @@
 [gd_scene load_steps=11 format=3 uid="uid://dv3gfywqxkntg"]
 
 [ext_resource type="Script" path="res://game files/prototype apply/elements/button.gd" id="1_6xtfm"]
-[ext_resource type="Texture2D" path="res://game files/prototype apply/initial_item_assets.png" id="2_wade6"]
+[ext_resource type="Texture2D" uid="uid://dmt38v5wy1jpl" path="res://game files/prototype apply/elements/initial_item_assets.png" id="2_wade6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nnjuc"]
 size = Vector2(8, 2)

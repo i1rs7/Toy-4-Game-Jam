@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://mfvxnkfd0kye"]
 
 [ext_resource type="Script" path="res://game files/prototype apply/elements/door.gd" id="1_76o3w"]
-[ext_resource type="Texture2D" path="res://game files/prototype apply/initial_item_assets.png" id="2_kxwtd"]
+[ext_resource type="Texture2D" uid="uid://dmt38v5wy1jpl" path="res://game files/prototype apply/elements/initial_item_assets.png" id="2_kxwtd"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_4xsmb"]
 size = Vector3(8, 32, 0)
