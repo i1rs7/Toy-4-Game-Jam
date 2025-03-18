@@ -1,8 +1,7 @@
-[gd_scene load_steps=14 format=3 uid="uid://cd7sgd08m8305"]
+[gd_scene load_steps=16 format=3 uid="uid://cd7sgd08m8305"]
 
 [ext_resource type="Script" path="res://game files/prototype apply/elements/trampoline.gd" id="1_cygse"]
-[ext_resource type="Texture2D" path="res://game files/prototype apply/initial_item_assets.png" id="2_wq2n8"]
-[ext_resource type="BoxMesh" path="res://green.tres" id="3_vsqvp"]
+[ext_resource type="Texture2D" uid="uid://dmt38v5wy1jpl" path="res://game files/prototype apply/initial_item_assets.png" id="2_wq2n8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bcjvr"]
 size = Vector2(8, 3)
@@ -64,6 +63,12 @@ animations = [{
 "speed": 6.0
 }]
 
+[sub_resource type="BoxMesh" id="BoxMesh_0ad0m"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_t8ts2"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_8jh46"]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4k5w7"]
 size = Vector2(11, 5)
 
@@ -84,21 +89,21 @@ sprite_frames = SubResource("SpriteFrames_sc1im")
 self_modulate = Color(0.133333, 0.694118, 0.298039, 1)
 position = Vector2(4, -1)
 scale = Vector2(11.375, 1)
-mesh = ExtResource("3_vsqvp")
+mesh = SubResource("BoxMesh_0ad0m")
 
 [node name="DisableBoxRight" type="MeshInstance2D" parent="."]
 self_modulate = Color(0.133333, 0.694118, 0.298039, 1)
 position = Vector2(9, 1.37032)
 rotation = 1.5708
 scale = Vector2(3.7894, 1)
-mesh = ExtResource("3_vsqvp")
+mesh = SubResource("BoxMesh_t8ts2")
 
 [node name="DisableBoxLeft" type="MeshInstance2D" parent="."]
 self_modulate = Color(0.133333, 0.694118, 0.298039, 1)
 position = Vector2(-1, 1.37744)
 rotation = 1.5708
 scale = Vector2(3.77516, 1)
-mesh = ExtResource("3_vsqvp")
+mesh = SubResource("BoxMesh_8jh46")
 
 [node name="DisableBoxCollision" type="CollisionShape2D" parent="."]
 position = Vector2(4, 1)
