@@ -1,15 +1,19 @@
 extends Control
+var menu = preload("res://UI_stuff/UI_scene/MENU_UI.tscn")
+var credits = preload("res://UI_stuff/UI_scene/CREDITS.tscn")
 
 
 
-
-func _on_s_button_pressed() -> void:
-	pass
 
 
 func _on_c_button_pressed() -> void:
-	get_tree().change_scene_to_file("res://CREDITS.tscn")
+	get_parent().add_child(credits.instantiate())
+	queue_free()
+
+
+
 
 
 func _on_r_button_pressed() -> void:
-	get_tree().change_scene_to_file("res://MENU_UI.tscn")
+	get_parent().add_child(menu.instantiate())
+	queue_free()

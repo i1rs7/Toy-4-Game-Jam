@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://bslwji1dvn8e6"]
 
-[ext_resource type="Script" path="res://UI_scrips/htp_ui.gd" id="1_8y8ug"]
+[ext_resource type="Script" path="res://UI_stuff/UI_scrips/htp_ui.gd" id="1_68kx1"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b0e0c"]
 bg_color = Color(0.0627451, 0.0901961, 0.129412, 1)
@@ -38,7 +38,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_8y8ug")
+script = ExtResource("1_68kx1")
 metadata/_edit_horizontal_guides_ = [341.0]
 
 [node name="HTP_Box" type="Panel" parent="."]

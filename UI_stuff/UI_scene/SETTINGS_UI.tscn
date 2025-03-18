@@ -47,6 +47,7 @@ offset_bottom = 580.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_bxdw2")
 
 [node name="SOUND" type="Panel" parent="SETTINGS_BOX"]
+visible = false
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
