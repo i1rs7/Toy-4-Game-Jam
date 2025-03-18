@@ -1,0 +1,17 @@
+[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://cxvh1ddx6eu3m"]
+
+[ext_resource type="Texture2D" uid="uid://dmt38v5wy1jpl" path="res://game files/prototype apply/git_tilemap.png" id="1_3sfnd"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ohs1w"]
+texture = ExtResource("1_3sfnd")
+texture_region_size = Vector2i(2, 2)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-1, -1, -1, 1, 1, 1, 1, -1)
+2:0/0 = 0
+4:0/0 = 0
+4:0/0/modulate = Color(0.509286, 0.509286, 0.509286, 1)
+
+[resource]
+tile_size = Vector2i(2, 2)
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_ohs1w")

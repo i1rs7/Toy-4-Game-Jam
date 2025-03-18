@@ -6,3 +6,7 @@
 
 [node name="Level1" parent="." instance=ExtResource("1_b1xhi")]
 scale = Vector2(4, 4)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(1152, 664)
+zoom = Vector2(0.5, 0.5)
