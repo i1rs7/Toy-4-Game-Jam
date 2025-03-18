@@ -1,7 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://cuns215cersy3"]
+[gd_scene load_steps=6 format=3 uid="uid://cuns215cersy3"]
 
-[ext_resource type="Script" path="res://ui.gd" id="1_7wu1w"]
+[ext_resource type="Script" path="res://UI_stuff/ui.gd" id="1_7wu1w"]
 [ext_resource type="PackedScene" uid="uid://cvfojni6liccy" path="res://UI_stuff/UI_scene/MENU_UI.tscn" id="2_c322q"]
+[ext_resource type="PackedScene" uid="uid://b33wa7ddmn60r" path="res://UI_stuff/UI_scene/SETTINGS_UI.tscn" id="3_1s8rj"]
+[ext_resource type="PackedScene" uid="uid://c6dbbi3e3pui5" path="res://UI_stuff/UI_scene/CREDITS.tscn" id="4_84thx"]
+[ext_resource type="PackedScene" uid="uid://bslwji1dvn8e6" path="res://UI_stuff/UI_scene/HTP_UI.tscn" id="5_iwi7n"]
 
 [node name="UI" type="Control"]
 layout_mode = 3
@@ -13,4 +16,16 @@ grow_vertical = 2
 script = ExtResource("1_7wu1w")
 
 [node name="Menu" parent="." instance=ExtResource("2_c322q")]
+layout_mode = 1
+
+[node name="SETTINGS_ui" parent="Menu" instance=ExtResource("3_1s8rj")]
+visible = false
+layout_mode = 1
+
+[node name="CREDITS_ui" parent="Menu/SETTINGS_ui" instance=ExtResource("4_84thx")]
+visible = false
+layout_mode = 1
+
+[node name="HTP_ui" parent="Menu" instance=ExtResource("5_iwi7n")]
+visible = false
 layout_mode = 1

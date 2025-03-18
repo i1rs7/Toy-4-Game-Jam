@@ -13,3 +13,7 @@ position = Vector2(1152, 664)
 zoom = Vector2(0.5, 0.5)
 
 [node name="UI" parent="." instance=ExtResource("2_3yrxw")]
+offset_left = 1407.0
+offset_top = 42.0
+offset_right = 1407.0
+offset_bottom = 42.0
