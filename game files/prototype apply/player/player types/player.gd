@@ -44,5 +44,11 @@ func handle_collisions():
 			set_meta("key", true)
 		elif collider.is_in_group("trampolines") and collider.state and position.y < collider.position.y:
 			velocity.y = TRAMP_BOUNCE_VELOCITY
-			Globals.tramp_is_touched = true
+			collider.play_animation()
 			
+			
+
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	if body.is_class("CharacterBody2D") and self != body:
+		get_parent().merge()

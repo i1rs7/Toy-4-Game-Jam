@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://dwtsylfvti68l"]
+[gd_scene load_steps=3 format=3 uid="uid://dwtsylfvti68l"]
 
 [ext_resource type="PackedScene" uid="uid://2ds76dy3kf4n" path="res://game files/prototype apply/levels/level 1.tscn" id="1_b1xhi"]
+[ext_resource type="PackedScene" uid="uid://cuns215cersy3" path="res://UI_stuff/ui.tscn" id="2_3yrxw"]
 
 [node name="Game" type="Node2D"]
 
@@ -10,3 +11,5 @@ scale = Vector2(4, 4)
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(1152, 664)
 zoom = Vector2(0.5, 0.5)
+
+[node name="UI" parent="." instance=ExtResource("2_3yrxw")]
