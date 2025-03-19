@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3 uid="uid://bhb2dfkm00wad"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_7mou6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jg4vw"]
+size = Vector2(118, 123)
+
+[node name="Ending Door" type="Area2D"]
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
+self_modulate = Color(0.149475, 0.149475, 0.149475, 1)
+position = Vector2(52.75, 61.25)
+scale = Vector2(106.5, 123.5)
+mesh = SubResource("BoxMesh_7mou6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(60, 60)
+shape = SubResource("RectangleShape2D_jg4vw")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 6.0
+offset_top = 21.0
+offset_right = 97.0
+offset_bottom = 96.0
+text = "Temporary ending door
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2

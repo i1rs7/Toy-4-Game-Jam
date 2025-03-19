@@ -35,7 +35,7 @@ func handle_collisions():
 		var collision = get_slide_collision(index)
 		if collision == null: continue
 		var collider = collision.get_collider()
-		if collider.is_in_group("doors") and get_meta("key"):
+		if collider.is_in_group("doors") and get_meta("key") and collider.state:
 			collider.state = false
 			set_meta("key", false)
 			self.get_node("key").visible = false
