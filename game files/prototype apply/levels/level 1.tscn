@@ -1,11 +1,11 @@
 [gd_scene load_steps=7 format=4 uid="uid://2ds76dy3kf4n"]
 
-[ext_resource type="TileSet" uid="uid://1rhv5vu827c0" path="res://game files/prototype apply/levels/new_git_tileset.tres" id="1_1es6q"]
+[ext_resource type="TileSet" uid="uid://1rhv5vu827c0" path="res://game files/prototype apply/tilesets/new_git_tileset.tres" id="1_1es6q"]
 [ext_resource type="PackedScene" uid="uid://b67ugbbxevfx" path="res://game files/prototype apply/player/player manager.tscn" id="2_o5qc8"]
-[ext_resource type="PackedScene" uid="uid://mfvxnkfd0kye" path="res://game files/prototype apply/elements/door.tscn" id="3_63glo"]
-[ext_resource type="PackedScene" uid="uid://cd7sgd08m8305" path="res://game files/prototype apply/elements/trampoline.tscn" id="4_rrbb1"]
-[ext_resource type="PackedScene" uid="uid://bvrsb6iwj46bd" path="res://game files/prototype apply/elements/key.tscn" id="5_y3yil"]
-[ext_resource type="PackedScene" uid="uid://dv3gfywqxkntg" path="res://game files/prototype apply/elements/button.tscn" id="6_oqajh"]
+[ext_resource type="PackedScene" uid="uid://mfvxnkfd0kye" path="res://game files/prototype apply/elements/door/door.tscn" id="3_63glo"]
+[ext_resource type="PackedScene" uid="uid://cd7sgd08m8305" path="res://game files/prototype apply/elements/trampoline/trampoline.tscn" id="4_rrbb1"]
+[ext_resource type="PackedScene" uid="uid://bvrsb6iwj46bd" path="res://game files/prototype apply/elements/key/key.tscn" id="5_y3yil"]
+[ext_resource type="PackedScene" uid="uid://dv3gfywqxkntg" path="res://game files/prototype apply/elements/button/button.tscn" id="6_oqajh"]
 
 [node name="Level1" type="Node2D"]
 

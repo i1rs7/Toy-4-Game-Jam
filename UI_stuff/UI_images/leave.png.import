@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d6bcfvlnk163"
-path="res://.godot/imported/updated_tilemap.png-a16c6010a2750a77f36aae988ae66110.ctex"
+uid="uid://c3x7usvedkb5k"
+path="res://.godot/imported/leave.png-9b7cf148eef8308f2691c1a9c949b3ac.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://game files/prototype apply/levels/updated_tilemap.png"
-dest_files=["res://.godot/imported/updated_tilemap.png-a16c6010a2750a77f36aae988ae66110.ctex"]
+source_file="res://UI_stuff/UI_images/leave.png"
+dest_files=["res://.godot/imported/leave.png-9b7cf148eef8308f2691c1a9c949b3ac.ctex"]
 
 [params]
 

@@ -15,10 +15,9 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	if state: enable()
 	else: disable()
-	if Globals.tramp_is_touched:
-		$AnimatedSprite2D.play()
-		Globals.tramp_is_touched = false
-		
+	
+func play_animation():
+	$AnimatedSprite2D.play()
 
 
 func disable():

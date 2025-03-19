@@ -1,0 +1,115 @@
+[gd_scene load_steps=5 format=3 uid="uid://c6dbbi3e3pui5"]
+
+[ext_resource type="Script" path="res://UI_stuff/UI_scrips/credits.gd" id="1_1qs7u"]
+[ext_resource type="Texture2D" uid="uid://c3x7usvedkb5k" path="res://UI_stuff/UI_images/leave.png" id="2_b7ctr"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sja14"]
+bg_color = Color(0.0612635, 0.0904829, 0.131047, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_color = Color(0.113363, 0.151691, 0.308936, 0.6)
+shadow_size = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5r8wr"]
+bg_color = Color(0.0157725, 0.0227599, 0.134488, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[node name="CREDITS_ui" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1qs7u")
+
+[node name="SETTINGS_BOX" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 399.0
+offset_top = 47.0
+offset_right = 802.0
+offset_bottom = 580.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_sja14")
+
+[node name="Label" type="Label" parent="SETTINGS_BOX"]
+layout_mode = 0
+offset_left = 23.0
+offset_top = 48.0
+offset_right = 378.0
+offset_bottom = 461.0
+text = "                                  CREDITS
+
+
+Iris: Leader of Github and Docs, Artist + Sound 
+                   Designer, some coding
+
+
+
+
+Jacob: Leader of Deadlines/Communications,
+                                  Coder
+
+
+
+Kai:                  Level/UI Designer"
+
+[node name="RETURNTOGAME" type="Panel" parent="SETTINGS_BOX"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -134.5
+offset_top = 461.0
+offset_right = 128.5
+offset_bottom = 501.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_5r8wr")
+
+[node name="RETURN_SYMBOL" type="TextureRect" parent="SETTINGS_BOX/RETURNTOGAME"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -39.0
+offset_top = -17.0
+offset_right = -7.0
+offset_bottom = 15.0
+grow_horizontal = 0
+grow_vertical = 2
+scale = Vector2(0.994814, 1)
+texture = ExtResource("2_b7ctr")
+expand_mode = 1
+
+[node name="R_lab" type="Label" parent="SETTINGS_BOX/RETURNTOGAME"]
+layout_mode = 0
+offset_left = 74.0
+offset_top = 4.0
+offset_right = 137.0
+offset_bottom = 27.0
+scale = Vector2(1.57785, 1.23594)
+text = "RETURN
+"
+
+[node name="R_button" type="Button" parent="SETTINGS_BOX/RETURNTOGAME"]
+layout_mode = 0
+offset_right = 261.0
+offset_bottom = 37.0
+
+[connection signal="pressed" from="SETTINGS_BOX/RETURNTOGAME/R_button" to="." method="_on_r_button_pressed"]

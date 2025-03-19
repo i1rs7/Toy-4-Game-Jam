@@ -4,7 +4,8 @@ const CAT = preload("res://game files/prototype apply/player/player types/cat.ts
 const OCTOCAT = preload("res://game files/prototype apply/player/player types/octocat.tscn")
 const OCTOPUS = preload("res://game files/prototype apply/player/player types/octopus.tscn")
 
-var radius = 4
+
+var split_distance = 20
 
 func _ready() -> void:
 	pass
@@ -18,7 +19,6 @@ func _process(_delta: float) -> void:
 func merge():
 	var cat = get_child(0)
 	var oct = get_child(1)
-	if cat.position.distance_to(oct.position) > radius*2.5: return
 	var octocat = OCTOCAT.instantiate()
 	octocat.position = (cat.position+oct.position)/2
 	add_child(octocat)
@@ -36,8 +36,8 @@ func split():
 	var octocat = get_child(0)
 	var cat = CAT.instantiate()
 	var oct = OCTOPUS.instantiate()
-	cat.position = octocat.position + Vector2(radius,0)
-	oct.position = octocat.position - Vector2(radius,0)
+	cat.position = octocat.position + Vector2(split_distance,0)
+	oct.position = octocat.position - Vector2(split_distance,0)
 	add_child(cat)
 	add_child(oct)
 	cat.set_meta("selected", true)
