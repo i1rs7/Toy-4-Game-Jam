@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=4 uid="uid://2ds76dy3kf4n"]
+[gd_scene load_steps=8 format=4 uid="uid://2ds76dy3kf4n"]
 
 [ext_resource type="TileSet" uid="uid://1rhv5vu827c0" path="res://game files/prototype apply/tilesets/new_git_tileset.tres" id="1_1es6q"]
 [ext_resource type="PackedScene" uid="uid://b67ugbbxevfx" path="res://game files/prototype apply/player/player manager.tscn" id="2_o5qc8"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://cd7sgd08m8305" path="res://game files/prototype apply/elements/trampoline/trampoline.tscn" id="4_rrbb1"]
 [ext_resource type="PackedScene" uid="uid://bvrsb6iwj46bd" path="res://game files/prototype apply/elements/key/key.tscn" id="5_y3yil"]
 [ext_resource type="PackedScene" uid="uid://dv3gfywqxkntg" path="res://game files/prototype apply/elements/button/button.tscn" id="6_oqajh"]
+[ext_resource type="Script" path="res://game files/prototype apply/elements/key/key.gd" id="7_tgqlp"]
 
 [node name="Level1" type="Node2D"]
 
@@ -36,8 +37,9 @@ position = Vector2(71, 232)
 scale = Vector2(4, 4)
 
 [node name="Key" parent="Elements" instance=ExtResource("5_y3yil")]
-position = Vector2(199, 46)
+position = Vector2(198, 32)
 scale = Vector2(1.3, 1.3)
+script = ExtResource("7_tgqlp")
 
 [node name="Trampoline2" parent="Elements" instance=ExtResource("4_rrbb1")]
 position = Vector2(188, 154)
