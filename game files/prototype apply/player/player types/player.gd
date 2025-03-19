@@ -24,8 +24,8 @@ func _physics_process(delta: float) -> void:
 func move(delta: float) -> void:
 	if not is_on_floor(): velocity += get_gravity() * delta # Add the gravity.
 	if self.get_meta("selected"): # only evaluate movement if the node is selected
-		if Input.is_action_just_pressed("ui_up") and is_on_floor(): velocity.y = JUMP_VELOCITY # Handle jump.
-		velocity.x = Input.get_axis("ui_left","ui_right") * SPEED # move based on left and right
+		if Input.is_action_just_pressed("up") and is_on_floor(): velocity.y = JUMP_VELOCITY # Handle jump.
+		velocity.x = Input.get_axis("left","right") * SPEED # move based on left and right
 		player_animation()
 	move_and_slide() # Move by velocity.
 
@@ -48,11 +48,11 @@ func handle_collisions():
 			
 			
 func player_animation():
-	if Input.get_axis("ui_left","ui_right") == 1:
+	if Input.get_axis("left","right") == 1:
 		$AnimatedSprite2D.play("move_right")
-	elif Input.get_axis("ui_left","ui_right") == -1:
+	elif Input.get_axis("left","right") == -1:
 		$AnimatedSprite2D.play("move_left")
-	elif Input.get_axis("ui_left","ui_right") == 0:
+	elif Input.get_axis("left","right") == 0:
 		$AnimatedSprite2D.frame = 0
 
 
