@@ -6,11 +6,12 @@
 [node name="Game" type="Node2D"]
 
 [node name="Level1" parent="." instance=ExtResource("1_b1xhi")]
+position = Vector2(2, -30)
 scale = Vector2(4, 4)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(1152, 664)
-zoom = Vector2(0.5, 0.5)
+zoom = Vector2(0.3, 0.3)
 
 [node name="UI" parent="." instance=ExtResource("2_3yrxw")]
 offset_left = 1407.0
