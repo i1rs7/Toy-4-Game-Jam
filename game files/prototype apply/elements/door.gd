@@ -13,7 +13,10 @@ func _process(_delta: float) -> void:
 func disable():
 	get_child(0).hide()
 	get_child(1).show()
-	get_child(2).disabled = true
+	var counter = 1
+	while counter<10 and self.position.y < 240:
+		counter +=1
+		self.position.y += 0.05
 
 func enable():
 	get_child(1).hide()

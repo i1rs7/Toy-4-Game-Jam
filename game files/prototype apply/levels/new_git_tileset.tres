@@ -1,0 +1,17 @@
+[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://1rhv5vu827c0"]
+
+[ext_resource type="Texture2D" uid="uid://d6bcfvlnk163" path="res://game files/prototype apply/levels/updated_tilemap.png" id="1_6c65v"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lo8t5"]
+texture = ExtResource("1_6c65v")
+texture_region_size = Vector2i(2, 2)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-1, -1, -1, 1, 1, 1, 1, -1)
+2:0/0 = 0
+4:0/0 = 0
+4:0/0/modulate = Color(0.615422, 0.615422, 0.615422, 1)
+
+[resource]
+tile_size = Vector2i(2, 2)
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_lo8t5")
