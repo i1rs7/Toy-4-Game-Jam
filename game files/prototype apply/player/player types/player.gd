@@ -2,9 +2,9 @@ extends CharacterBody2D
 
 const KEY = preload("res://game files/prototype apply/elements/key/key.tscn")
 
-const SPEED = 600.0
-const JUMP_VELOCITY = -700.0
-const TRAMP_BOUNCE_VELOCITY = -950.0
+const SPEED = 200.0
+const JUMP_VELOCITY = -250.0
+const TRAMP_BOUNCE_VELOCITY = -375.0
 
 var player_has_key = false
 var player_key_above_head = false 
@@ -22,7 +22,7 @@ func _physics_process(delta: float) -> void:
 
 
 func move(delta: float) -> void:
-	if not is_on_floor(): velocity += get_gravity() * delta # Add the gravity.
+	if not is_on_floor(): velocity += get_gravity() * delta / 2 # Add the gravity.
 	if self.get_meta("selected"): # only evaluate movement if the node is selected
 		if Input.is_action_just_pressed("ui_up") and is_on_floor(): velocity.y = JUMP_VELOCITY # Handle jump.
 		velocity.x = Input.get_axis("ui_left","ui_right") * SPEED # move based on left and right

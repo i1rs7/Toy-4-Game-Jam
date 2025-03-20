@@ -1,6 +1,7 @@
 extends StaticBody2D
 
 @export var state = true
+@export var slow_open = true
 
 func _ready() -> void:
 	pass
@@ -11,9 +12,8 @@ func _process(_delta: float) -> void:
 
 
 func disable():
-	#get_child(0).hide() note: not sure what this code does but 
-	#get_child(1).show() it doesn't seem to affect anything?
-	lower_door()
+	if slow_open: lower_door()
+	else: queue_free()
 
 func enable():
 	get_child(1).hide()

@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://bjdb8mrbps330"]
+
+[ext_resource type="PackedScene" uid="uid://b67ugbbxevfx" path="res://game files/prototype apply/player/player manager.tscn" id="1_krukv"]
+
+[node name="Level2" type="Node2D"]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+
+[node name="PlayerManager" parent="." instance=ExtResource("1_krukv")]
+
+[node name="Elements" type="Node2D" parent="."]
