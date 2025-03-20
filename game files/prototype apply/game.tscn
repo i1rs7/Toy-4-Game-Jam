@@ -1,35 +1,18 @@
 [gd_scene load_steps=5 format=3 uid="uid://dwtsylfvti68l"]
 
-[ext_resource type="PackedScene" uid="uid://2ds76dy3kf4n" path="res://game files/prototype apply/levels/level 1.tscn" id="1_b1xhi"]
+[ext_resource type="PackedScene" uid="uid://bjdb8mrbps330" path="res://game files/prototype apply/levels/level 1.tscn" id="1_b1xhi"]
 [ext_resource type="Script" path="res://game files/prototype apply/game.gd" id="1_e3l26"]
 [ext_resource type="PackedScene" uid="uid://cuns215cersy3" path="res://UI_stuff/ui.tscn" id="2_3yrxw"]
-[ext_resource type="PackedScene" uid="uid://bhb2dfkm00wad" path="res://game files/prototype apply/ending_door.tscn" id="4_vygle"]
+[ext_resource type="Script" path="res://game files/prototype apply/levels/level_manager.gd" id="2_c6yd4"]
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_e3l26")
 
 [node name="Level Manager" type="Node2D" parent="."]
+script = ExtResource("2_c6yd4")
 
 [node name="Level1" parent="Level Manager" instance=ExtResource("1_b1xhi")]
 
 [node name="UI" parent="." instance=ExtResource("2_3yrxw")]
 visible = false
 scale = Vector2(0.5, 0.5)
-
-[node name="Level Complete" type="Label" parent="."]
-visible = false
-offset_left = 56.0
-offset_top = 154.0
-offset_right = 1539.0
-offset_bottom = 427.0
-rotation = -0.174533
-scale = Vector2(0.31, 0.31)
-theme_override_font_sizes/font_size = 200
-text = "Level Complete
-"
-
-[node name="Ending Door" parent="." instance=ExtResource("4_vygle")]
-position = Vector2(517, 187)
-scale = Vector2(0.4, 0.4)
-
-[connection signal="body_entered" from="Ending Door" to="." method="_on_ending_door_body_entered"]

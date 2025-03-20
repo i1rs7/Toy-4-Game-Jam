@@ -56,9 +56,9 @@ func player_animation():
 		$AnimatedSprite2D.frame = 0
 
 
-func set_key_position(key):
-	key.position.x = self.position.x/20
-	key.position.y = self.position.y/20 -25
+#func set_key_position(key):
+	#key.position.x = self.position.x/20
+	#key.position.y = self.position.y/20 -25
 	
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.is_class("CharacterBody2D") and self != body:

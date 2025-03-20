@@ -1,9 +1,12 @@
 extends Node2D
 
+var levels = []
+var num_levels = 1
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass
+	for index in num_levels:
+		levels.append(load("res://game files/prototype apply/levels/level " + str(index) + ".tscn"))
+
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

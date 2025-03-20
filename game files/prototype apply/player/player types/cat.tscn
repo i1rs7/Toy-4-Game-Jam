@@ -4,12 +4,12 @@
 [ext_resource type="Texture2D" uid="uid://deo8a4rwsrn28" path="res://game files/prototype apply/player/player_tilesheet.png" id="2_txp5u"]
 [ext_resource type="Texture2D" uid="uid://dmt38v5wy1jpl" path="res://game files/prototype apply/elements/item assets.png" id="3_wim6q"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4vup7"]
+size = Vector2(28, 26)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_er80g"]
 atlas = ExtResource("2_txp5u")
 region = Rect2(0, 33, 32, 32)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_4vup7"]
-size = Vector2(28, 26)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_a6ufs"]
 atlas = ExtResource("2_txp5u")

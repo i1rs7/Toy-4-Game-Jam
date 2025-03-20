@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://bxhs40jun86aa"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f42ta"]
+size = Vector2(16, 16)
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_5rrgl"]
+size = Vector2(16, 16)
+
+[node name="Flag" type="Area2D" groups=["flags"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_f42ta")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("PlaceholderTexture2D_5rrgl")
