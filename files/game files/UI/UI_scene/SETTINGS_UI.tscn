@@ -1,0 +1,150 @@
+[gd_scene load_steps=5 format=3 uid="uid://b33wa7ddmn60r"]
+
+[ext_resource type="Script" path="res://files/game files/UI/UI_scrips/settings_ui.gd" id="1_unxrw"]
+[ext_resource type="Texture2D" uid="uid://c3x7usvedkb5k" path="res://files/game files/UI/UI_images/leave.png" id="2_4rt28"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bxdw2"]
+bg_color = Color(0.0612635, 0.0904829, 0.131047, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_color = Color(0.113363, 0.151691, 0.308936, 0.6)
+shadow_size = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lituq"]
+bg_color = Color(0.0157725, 0.0227599, 0.134488, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[node name="SETTINGS_ui" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_unxrw")
+
+[node name="SETTINGS_BOX" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 399.0
+offset_top = 47.0
+offset_right = 802.0
+offset_bottom = 580.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_bxdw2")
+
+[node name="SOUND" type="Panel" parent="SETTINGS_BOX"]
+visible = false
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -133.5
+offset_top = 33.0
+offset_right = 129.5
+offset_bottom = 73.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_lituq")
+
+[node name="S_lab" type="Label" parent="SETTINGS_BOX/SOUND"]
+layout_mode = 0
+offset_left = 74.0
+offset_right = 148.0
+offset_bottom = 23.0
+scale = Vector2(1.98573, 1.56538)
+text = "SOUND
+"
+
+[node name="S_button" type="Button" parent="SETTINGS_BOX/SOUND"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 261.0
+offset_bottom = 38.0
+
+[node name="CREDITS" type="Panel" parent="SETTINGS_BOX"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -133.5
+offset_top = 110.0
+offset_right = 129.5
+offset_bottom = 150.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_lituq")
+
+[node name="C_lab" type="Label" parent="SETTINGS_BOX/CREDITS"]
+layout_mode = 0
+offset_left = 74.0
+offset_right = 183.0
+offset_bottom = 23.0
+scale = Vector2(1.62091, 1.39883)
+text = "CREDITS
+"
+
+[node name="C_Button" type="Button" parent="SETTINGS_BOX/CREDITS"]
+layout_mode = 0
+offset_right = 261.0
+offset_bottom = 37.0
+
+[node name="RETURNTOGAME" type="Panel" parent="SETTINGS_BOX"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -133.5
+offset_top = 447.0
+offset_right = 129.5
+offset_bottom = 487.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_lituq")
+
+[node name="RETURN_SYMBOL" type="TextureRect" parent="SETTINGS_BOX/RETURNTOGAME"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -39.0
+offset_top = -17.0
+offset_right = -7.0
+offset_bottom = 15.0
+grow_horizontal = 0
+grow_vertical = 2
+scale = Vector2(0.994814, 1)
+texture = ExtResource("2_4rt28")
+expand_mode = 1
+
+[node name="R_lab" type="Label" parent="SETTINGS_BOX/RETURNTOGAME"]
+layout_mode = 0
+offset_left = 74.0
+offset_top = 4.0
+offset_right = 137.0
+offset_bottom = 27.0
+scale = Vector2(1.57785, 1.23594)
+text = "RETURN
+"
+
+[node name="R_Button" type="Button" parent="SETTINGS_BOX/RETURNTOGAME"]
+layout_mode = 0
+offset_right = 261.0
+offset_bottom = 37.0
+
+[connection signal="pressed" from="SETTINGS_BOX/SOUND/S_button" to="." method="_on_s_button_pressed"]
+[connection signal="pressed" from="SETTINGS_BOX/CREDITS/C_Button" to="." method="_on_c_button_pressed"]
+[connection signal="pressed" from="SETTINGS_BOX/RETURNTOGAME/R_Button" to="." method="_on_r_button_pressed"]

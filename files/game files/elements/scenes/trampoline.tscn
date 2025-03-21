@@ -1,0 +1,109 @@
+[gd_scene load_steps=16 format=3 uid="uid://cd7sgd08m8305"]
+
+[ext_resource type="Script" path="res://files/game files/elements/scripts/trampoline.gd" id="1_cygse"]
+[ext_resource type="Texture2D" uid="uid://dmt38v5wy1jpl" path="res://files/game files/elements/assets/item assets.png" id="2_wq2n8"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_0ad0m"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_t8ts2"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_8jh46"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4k5w7"]
+size = Vector2(11, 5)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fk7es"]
+atlas = ExtResource("2_wq2n8")
+region = Rect2(0, 51, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fr6yh"]
+atlas = ExtResource("2_wq2n8")
+region = Rect2(17, 51, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tkb5p"]
+atlas = ExtResource("2_wq2n8")
+region = Rect2(34, 51, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7383y"]
+atlas = ExtResource("2_wq2n8")
+region = Rect2(51, 51, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_71r5d"]
+atlas = ExtResource("2_wq2n8")
+region = Rect2(68, 51, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8yij5"]
+atlas = ExtResource("2_wq2n8")
+region = Rect2(85, 51, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xhngl"]
+atlas = ExtResource("2_wq2n8")
+region = Rect2(102, 51, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_sc1im"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fk7es")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fr6yh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tkb5p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7383y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_71r5d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8yij5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xhngl")
+}],
+"loop": false,
+"name": &"default",
+"speed": 6.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bcjvr"]
+size = Vector2(8, 3)
+
+[node name="Trampoline" type="StaticBody2D" groups=["trampolines"]]
+script = ExtResource("1_cygse")
+
+[node name="DisableBoxTop" type="MeshInstance2D" parent="."]
+self_modulate = Color(0.133333, 0.694118, 0.298039, 1)
+position = Vector2(4, -1)
+scale = Vector2(11.375, 1)
+mesh = SubResource("BoxMesh_0ad0m")
+
+[node name="DisableBoxRight" type="MeshInstance2D" parent="."]
+self_modulate = Color(0.133333, 0.694118, 0.298039, 1)
+position = Vector2(9, 1.37032)
+rotation = 1.5708
+scale = Vector2(3.7894, 1)
+mesh = SubResource("BoxMesh_t8ts2")
+
+[node name="DisableBoxLeft" type="MeshInstance2D" parent="."]
+self_modulate = Color(0.133333, 0.694118, 0.298039, 1)
+position = Vector2(-1, 1.37744)
+rotation = 1.5708
+scale = Vector2(3.77516, 1)
+mesh = SubResource("BoxMesh_8jh46")
+
+[node name="DisableBoxCollision" type="CollisionShape2D" parent="."]
+position = Vector2(4, 1)
+shape = SubResource("RectangleShape2D_4k5w7")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(4, -1)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_sc1im")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(4, 1.5)
+shape = SubResource("RectangleShape2D_bcjvr")

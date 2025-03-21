@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://dwtsylfvti68l"]
+
+[ext_resource type="PackedScene" uid="uid://cuns215cersy3" path="res://files/game files/UI/ui.tscn" id="2_3yrxw"]
+[ext_resource type="Script" path="res://files/game files/levels/level_manager.gd" id="2_c6yd4"]
+
+[node name="Game" type="Node2D"]
+
+[node name="Level Manager" type="Node2D" parent="."]
+script = ExtResource("2_c6yd4")
+
+[node name="placeholder level" type="Node2D" parent="Level Manager"]
+visible = false
+
+[node name="UI" parent="." instance=ExtResource("2_3yrxw")]
+visible = false
+scale = Vector2(0.5, 0.5)
