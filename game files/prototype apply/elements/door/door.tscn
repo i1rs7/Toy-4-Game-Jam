@@ -1,52 +1,16 @@
-[gd_scene load_steps=9 format=3 uid="uid://mfvxnkfd0kye"]
+[gd_scene load_steps=4 format=3 uid="uid://mfvxnkfd0kye"]
 
 [ext_resource type="Script" path="res://game files/prototype apply/elements/door/door.gd" id="1_76o3w"]
-[ext_resource type="Texture2D" uid="uid://dmt38v5wy1jpl" path="res://game files/prototype apply/elements/item assets.png" id="2_kxwtd"]
-
-[sub_resource type="BoxMesh" id="BoxMesh_4xsmb"]
-size = Vector3(8, 32, 0)
-
-[sub_resource type="BoxMesh" id="BoxMesh_gyonf"]
-
-[sub_resource type="ViewportTexture" id="ViewportTexture_j5470"]
+[ext_resource type="Texture2D" uid="uid://b4p6pmkiy8sd4" path="res://game files/prototype apply/elements/door/door enabled.png" id="2_0doex"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k3iig"]
-size = Vector2(8, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_lm572"]
-atlas = ExtResource("2_kxwtd")
-region = Rect2(119, 17, 16, 16)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_4p7m8"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_lm572")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
+size = Vector2(16, 16)
 
 [node name="Door" type="StaticBody2D" groups=["doors"]]
 script = ExtResource("1_76o3w")
 
-[node name="EnabledMesh" type="MeshInstance2D" parent="."]
-position = Vector2(4, 16)
-mesh = SubResource("BoxMesh_4xsmb")
-
-[node name="DisabledMesh" type="MeshInstance2D" parent="."]
-visible = false
-position = Vector2(4, 16)
-scale = Vector2(8, 32)
-mesh = SubResource("BoxMesh_gyonf")
-texture = SubResource("ViewportTexture_j5470")
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_0doex")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(4, 16)
 shape = SubResource("RectangleShape2D_k3iig")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(4, 16)
-scale = Vector2(1, 2)
-sprite_frames = SubResource("SpriteFrames_4p7m8")

@@ -1,6 +1,7 @@
 extends StaticBody2D
 
 @export var state = true
+@export var slow_open = true
 
 func _ready() -> void:
 	pass
@@ -11,14 +12,12 @@ func _process(_delta: float) -> void:
 
 
 func disable():
-	#get_child(0).hide() note: not sure what this code does but 
-	#get_child(1).show() it doesn't seem to affect anything?
-	lower_door()
+	get_child(0).self_modulate.a = 0.25
+	get_child(1).disabled = true
 
 func enable():
-	get_child(1).hide()
-	get_child(0).show()
-	get_child(2).disabled = false
+	get_child(0).self_modulate.a = 1
+	get_child(1).disabled = false
 
 func lower_door():
 	var counter = 1
