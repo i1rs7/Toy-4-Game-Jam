@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://b67ugbbxevfx"]
+
+[ext_resource type="Script" path="res://files/game files/player/player_manager.gd" id="1_3b8r6"]
+[ext_resource type="PackedScene" uid="uid://dfy34ldxo572w" path="res://files/game files/player/player types/octocat.tscn" id="2_y16su"]
+
+[node name="PlayerManager" type="Node2D"]
+script = ExtResource("1_3b8r6")
+
+[node name="Octocat" parent="." instance=ExtResource("2_y16su")]

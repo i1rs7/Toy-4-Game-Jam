@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="test4"
-run/main_scene="res://game files/prototype apply/game.tscn"
+run/main_scene="res://files/game files/game.tscn"
 config/features=PackedStringArray("4.3", "Mobile")
 
 [display]
