@@ -6,7 +6,7 @@ size = Vector2(16, 16)
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_5rrgl"]
 size = Vector2(16, 16)
 
-[node name="Flag" type="Area2D" groups=["flags"]]
+[node name="Flag" type="StaticBody2D" groups=["flags"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_f42ta")

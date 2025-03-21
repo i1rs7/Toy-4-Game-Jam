@@ -45,6 +45,8 @@ func handle_collisions():
 		elif collider.is_in_group("trampolines") and collider.state and position.y < collider.position.y:
 			velocity.y = TRAMP_BOUNCE_VELOCITY
 			collider.play_animation()
+		elif collider.is_in_group("flags"):
+			get_tree().root.get_child(0).find_child("Level Manager").load_next_level()
 			
 			
 func player_animation():
@@ -55,10 +57,6 @@ func player_animation():
 	elif Input.get_axis("ui_left","ui_right") == 0:
 		$AnimatedSprite2D.frame = 0
 
-
-#func set_key_position(key):
-	#key.position.x = self.position.x/20
-	#key.position.y = self.position.y/20 -25
 	
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.is_class("CharacterBody2D") and self != body:

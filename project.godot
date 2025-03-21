@@ -28,6 +28,7 @@ doors=""
 trampolines=""
 buttons=""
 keys=""
+flags=""
 
 [input]
 
