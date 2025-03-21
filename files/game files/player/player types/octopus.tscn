@@ -139,7 +139,8 @@ shape = SubResource("RectangleShape2D_dr1ap")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_77rv0")
-animation = &"idle_left"
+animation = &"move_left"
+frame = 2
 
 [node name="key" type="AnimatedSprite2D" parent="."]
 visible = false
