@@ -14,6 +14,7 @@ func _process(_delta: float) -> void:
 	pass
 
 func load_next_level():
+	assert(levels.size() > current_level, "next level not found - update var num_levels and ensure all level scenes are named and stored correctly")
 	get_child(0).queue_free()
 	add_child(levels[current_level].instantiate())
 	current_level += 1
