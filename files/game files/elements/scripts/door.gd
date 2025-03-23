@@ -17,13 +17,13 @@ func button_update(state: bool):
 
 
 func disable():
-	get_child(1).disabled = true
 	if slow_open: lower_door()
 	else: get_child(0).self_modulate.a = 0.25
+	get_child(1).set_deferred("disabled", true)
 	
 
 func enable():
-	get_child(1).disabled = false
+	get_child(1).set_deferred("disabled", false)
 	get_child(0).self_modulate.a = 1
 
 func lower_door():
