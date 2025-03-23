@@ -1,19 +1,22 @@
 extends StaticBody2D
 
 @export var state = true
-@export var slow_open = true
+@export var default_state = true
+@export var slow_open = false
 
 func _ready() -> void:
 	pass
 
 func _process(_delta: float) -> void:
-	if state: enable()
+	if state == default_state: enable()
 	else: disable()
 
 
 func disable():
-	get_child(0).self_modulate.a = 0.25
 	get_child(1).disabled = true
+	if slow_open: lower_door()
+	else: get_child(0).self_modulate.a = 0.25
+	
 
 func enable():
 	get_child(0).self_modulate.a = 1

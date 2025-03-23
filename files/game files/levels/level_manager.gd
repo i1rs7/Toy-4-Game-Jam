@@ -1,7 +1,7 @@
 extends Node2D
 
 var levels = []
-var num_levels = 2
+var num_levels = 3
 var current_level = 0
 
 

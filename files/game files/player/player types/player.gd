@@ -13,6 +13,8 @@ func _on_ready() -> void:
 func _physics_process(delta: float) -> void:
 	move(delta)
 	handle_collisions()
+	if get_meta("key"): get_node("key").show()
+	else: get_node("key").hide()
 
 
 func move(delta: float) -> void:
