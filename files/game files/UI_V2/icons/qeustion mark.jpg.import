@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c22ct22plo5b4"
-path="res://.godot/imported/qeustion mark.jpg-010f800cd824ae13196a29607948acee.ctex"
+path="res://.godot/imported/qeustion mark.jpg-5e8ff5b653c39d84cea42cb5260c5fa4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://files/game files/UI/UI_images/qeustion mark.jpg"
-dest_files=["res://.godot/imported/qeustion mark.jpg-010f800cd824ae13196a29607948acee.ctex"]
+source_file="res://files/game files/UI_V2/icons/qeustion mark.jpg"
+dest_files=["res://.godot/imported/qeustion mark.jpg-5e8ff5b653c39d84cea42cb5260c5fa4.ctex"]
 
 [params]
 
