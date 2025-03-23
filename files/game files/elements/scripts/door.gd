@@ -1,15 +1,15 @@
 extends StaticBody2D
 
-@export var state = true
-@export var default_state = true
+@export var opened_by_key = false
+@export var initial_state = true
 @export var slow_open = false
 
 func _ready() -> void:
 	pass
 
 func _process(_delta: float) -> void:
-	if state == default_state: enable()
-	else: disable()
+	pass
+
 
 
 func disable():

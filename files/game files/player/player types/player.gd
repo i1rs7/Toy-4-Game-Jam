@@ -32,8 +32,8 @@ func handle_collisions():
 		if collision == null: continue
 		var collider = collision.get_collider()
 		# Collision checks, I know its bad but here
-		if collider.is_in_group("doors") and key and collider.state:
-			collider.state = false
+		if collider.is_in_group("doors") and key and collider.opened_by_key:
+			collider.disable()
 			key = false
 			get_node("key").hide()
 		elif collider.is_in_group("keys"):
