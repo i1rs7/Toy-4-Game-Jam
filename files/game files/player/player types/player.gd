@@ -13,13 +13,12 @@ func _on_ready() -> void:
 func _physics_process(delta: float) -> void:
 	move(delta)
 	handle_collisions()
-	if get_meta("key"):
-		self.get_node("key").visible = true
+	if get_meta("key"): get_node("key").visible = true
 
 
 func move(delta: float) -> void:
 	if not is_on_floor(): velocity += get_gravity() * delta / 2 # Add the gravity.
-	if self.get_meta("selected"): # only evaluate movement if the node is selected
+	if get_meta("selected"): # only evaluate movement if the node is selected
 		if Input.is_action_just_pressed("ui_up") and is_on_floor(): velocity.y = JUMP_VELOCITY # Handle jump.
 		velocity.x = Input.get_axis("ui_left","ui_right") * SPEED # move based on left and right
 		player_animation()
@@ -35,7 +34,7 @@ func handle_collisions():
 		if collider.is_in_group("doors") and get_meta("key") and collider.state:
 			collider.state = false
 			set_meta("key", false)
-			self.get_node("key").visible = false
+			get_node("key").visible = false
 		elif collider.is_in_group("keys"):
 			collider.queue_free()
 			set_meta("key", true)
@@ -52,7 +51,7 @@ func player_animation():
 	elif Input.get_axis("ui_left","ui_right") == -1:
 		$AnimatedSprite2D.play("move_left")
 	elif Input.get_axis("ui_left","ui_right") == 0:
-		$AnimatedSprite2D.frame = 0
+		$AnimatedSprite2D.stop()
 
 	
 func _on_area_2d_body_entered(body: Node2D) -> void:

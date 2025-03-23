@@ -9,12 +9,10 @@ var split_distance = 20
 
 func _ready() -> void:
 	pass
-	#for index in get_child_count(): get_child(index).ready.emit
 
 func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("spawn") and get_child_count() < 2: split()
 	if Input.is_action_just_pressed("ui_accept") and get_child_count() > 1: swap()
-	if Input.is_action_just_pressed("merge") and get_child_count() > 1: merge()
 
 func merge():
 	var cat = get_child(0)
