@@ -20,15 +20,16 @@ func merge():
 	var octocat = OCTOCAT.instantiate()
 	octocat.position = (cat.position+oct.position)/2
 	add_child(octocat)
-	octocat.set_meta("selected", true)
-	octocat.set_meta("key", cat.get_meta("key") or oct.get_meta("key"))
+	octocat.selected = true
+	octocat.key = cat.key or oct.key
+	if octocat.key : octocat.get_node("key").show()
 	cat.queue_free()
 	oct.queue_free()
 
 
 func swap():
-	get_child(0).set_meta("selected", !get_child(0).get_meta("selected"))
-	get_child(1).set_meta("selected", !get_child(1).get_meta("selected"))
+	get_child(0).selected = !get_child(0).selected
+	get_child(1).selected = !get_child(1).selected
 
 func split():
 	var octocat = get_child(0)
@@ -38,8 +39,10 @@ func split():
 	oct.position = octocat.position - Vector2(split_distance,0)
 	add_child(cat)
 	add_child(oct)
-	cat.set_meta("selected", true)
-	oct.set_meta("selected", false)
-	cat.set_meta("key", octocat.get_meta("key"))
-	oct.set_meta("key", octocat.get_meta("key"))
+	cat.selected = true
+	oct.selected = false
+	cat.key = octocat.key
+	oct.key = octocat.key
+	if cat.key: cat.get_node("key").show()
+	if oct.key: oct.get_node("key").show()
 	octocat.queue_free()
