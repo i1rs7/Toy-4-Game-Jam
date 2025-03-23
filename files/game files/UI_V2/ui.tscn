@@ -369,6 +369,37 @@ layout_mode = 2
 size_flags_vertical = 3
 columns = 2
 
+[node name="restart level" type="PanelContainer" parent="AspectRatioContainer/MarginContainer/Level Select/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 10
+theme_override_styles/panel = ExtResource("2_58y1d")
+
+[node name="MarginContainer" type="MarginContainer" parent="AspectRatioContainer/MarginContainer/Level Select/MarginContainer/VBoxContainer/restart level"]
+layout_mode = 2
+theme_override_constants/margin_left = 6
+theme_override_constants/margin_top = 3
+theme_override_constants/margin_right = 3
+theme_override_constants/margin_bottom = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="AspectRatioContainer/MarginContainer/Level Select/MarginContainer/VBoxContainer/restart level/MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="AspectRatioContainer/MarginContainer/Level Select/MarginContainer/VBoxContainer/restart level/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "RESTART LEVEL"
+horizontal_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="AspectRatioContainer/MarginContainer/Level Select/MarginContainer/VBoxContainer/restart level/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 10
+expand_mode = 3
+stretch_mode = 5
+
+[node name="restart_button" type="Button" parent="AspectRatioContainer/MarginContainer/Level Select/MarginContainer/VBoxContainer/restart level"]
+layout_mode = 2
+flat = true
+
 [node name="back" type="PanelContainer" parent="AspectRatioContainer/MarginContainer/Level Select/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 8
@@ -473,5 +504,6 @@ flat = true
 [connection signal="button_up" from="AspectRatioContainer/MarginContainer/Main Menu/MarginContainer/VBoxContainer/resume/resume_button" to="." method="_on_resume_button_button_up"]
 [connection signal="button_up" from="AspectRatioContainer/MarginContainer/Settings/MarginContainer/VBoxContainer/back/settings_back_button" to="." method="_on_settings_back_button_button_up"]
 [connection signal="button_up" from="AspectRatioContainer/MarginContainer/How To Play/MarginContainer/VBoxContainer/back/how_to_play_back_button" to="." method="_on_how_to_play_back_button_button_up"]
+[connection signal="button_up" from="AspectRatioContainer/MarginContainer/Level Select/MarginContainer/VBoxContainer/restart level/restart_button" to="." method="_on_restart_button_button_up"]
 [connection signal="button_up" from="AspectRatioContainer/MarginContainer/Level Select/MarginContainer/VBoxContainer/back/level_select_back_button" to="." method="_on_level_select_back_button_button_up"]
 [connection signal="button_up" from="AspectRatioContainer/MarginContainer/Credits/MarginContainer/VBoxContainer/back/credits_back_button" to="." method="_on_credits_back_button_button_up"]
