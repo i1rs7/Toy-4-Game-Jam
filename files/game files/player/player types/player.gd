@@ -13,7 +13,6 @@ func _on_ready() -> void:
 func _physics_process(delta: float) -> void:
 	move(delta)
 	handle_collisions()
-	if get_meta("key"): get_node("key").visible = true
 
 
 func move(delta: float) -> void:
@@ -34,9 +33,10 @@ func handle_collisions():
 		if collider.is_in_group("doors") and get_meta("key") and collider.state:
 			collider.state = false
 			set_meta("key", false)
-			get_node("key").visible = false
+			get_node("key").hide()
 		elif collider.is_in_group("keys"):
 			collider.queue_free()
+			get_node("key").show()
 			set_meta("key", true)
 		elif collider.is_in_group("trampolines") and collider.state and position.y < collider.position.y:
 			velocity.y = TRAMP_BOUNCE_VELOCITY
