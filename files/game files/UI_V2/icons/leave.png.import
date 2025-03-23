@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c3x7usvedkb5k"
-path="res://.godot/imported/leave.png-edbf642e6916912d63286e75c7ed9624.ctex"
+path="res://.godot/imported/leave.png-9713fddb95b06caa09908da56227808c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://files/game files/UI/UI_images/leave.png"
-dest_files=["res://.godot/imported/leave.png-edbf642e6916912d63286e75c7ed9624.ctex"]
+source_file="res://files/game files/UI_V2/icons/leave.png"
+dest_files=["res://.godot/imported/leave.png-9713fddb95b06caa09908da56227808c.ctex"]
 
 [params]
 

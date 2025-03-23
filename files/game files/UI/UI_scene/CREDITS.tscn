@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://c6dbbi3e3pui5"]
 
 [ext_resource type="Script" path="res://files/game files/UI/UI_scrips/credits.gd" id="1_1qs7u"]
-[ext_resource type="Texture2D" uid="uid://c3x7usvedkb5k" path="res://files/game files/UI/UI_images/leave.png" id="2_b7ctr"]
+[ext_resource type="Texture2D" uid="uid://c3x7usvedkb5k" path="res://files/game files/UI_V2/icons/leave.png" id="2_b7ctr"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sja14"]
 bg_color = Color(0.0612635, 0.0904829, 0.131047, 1)

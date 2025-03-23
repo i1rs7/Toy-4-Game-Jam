@@ -1,9 +1,10 @@
 [gd_scene load_steps=7 format=3 uid="uid://cvfojni6liccy"]
 
 [ext_resource type="Script" path="res://files/game files/UI/UI_scrips/menu_ui.gd" id="1_s0cai"]
-[ext_resource type="Texture2D" uid="uid://buue1mh88br0u" path="res://files/game files/UI/UI_images/setsymb.png" id="2_fw87a"]
-[ext_resource type="Texture2D" uid="uid://c22ct22plo5b4" path="res://files/game files/UI/UI_images/qeustion mark.jpg" id="3_jk1wa"]
-[ext_resource type="Texture2D" uid="uid://c3x7usvedkb5k" path="res://files/game files/UI/UI_images/leave.png" id="4_3inop"]
+[ext_resource type="Texture2D" uid="uid://buue1mh88br0u" path="res://files/game files/UI_V2/icons/setsymb.png" id="2_fw87a"]
+[ext_resource type="StyleBox" uid="uid://d0i0r0f4k64rb" path="res://files/game files/UI_V2/styles/panel.tres" id="2_jngum"]
+[ext_resource type="Texture2D" uid="uid://c22ct22plo5b4" path="res://files/game files/UI_V2/icons/qeustion mark.jpg" id="3_jk1wa"]
+[ext_resource type="Texture2D" uid="uid://c3x7usvedkb5k" path="res://files/game files/UI_V2/icons/leave.png" id="4_3inop"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3mhye"]
 bg_color = Color(0.0612635, 0.0904829, 0.131047, 1)
@@ -18,18 +19,6 @@ corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 shadow_color = Color(0.113363, 0.151691, 0.308936, 0.6)
 shadow_size = 4
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5alvr"]
-bg_color = Color(0.0157725, 0.0227599, 0.134488, 1)
-border_width_left = 2
-border_width_top = 2
-border_width_right = 2
-border_width_bottom = 2
-border_color = Color(0, 0, 0, 1)
-corner_radius_top_left = 4
-corner_radius_top_right = 4
-corner_radius_bottom_right = 4
-corner_radius_bottom_left = 4
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -58,7 +47,7 @@ offset_top = 33.0
 offset_right = 129.5
 offset_bottom = 73.0
 grow_horizontal = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_5alvr")
+theme_override_styles/panel = ExtResource("2_jngum")
 
 [node name="SettingsSymbol" type="TextureRect" parent="MenuBox/Settings"]
 layout_mode = 1
@@ -100,7 +89,7 @@ offset_top = 110.0
 offset_right = 129.5
 offset_bottom = 150.0
 grow_horizontal = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_5alvr")
+theme_override_styles/panel = ExtResource("2_jngum")
 
 [node name="questionsymbol" type="TextureRect" parent="MenuBox/HOWTOPLAY"]
 layout_mode = 1
@@ -143,7 +132,7 @@ offset_top = 430.0
 offset_right = 129.5
 offset_bottom = 470.0
 grow_horizontal = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_5alvr")
+theme_override_styles/panel = ExtResource("2_jngum")
 
 [node name="SettingsSymbol" type="TextureRect" parent="MenuBox/LEAVEGAME"]
 layout_mode = 1
@@ -186,7 +175,7 @@ offset_top = 358.0
 offset_right = 129.5
 offset_bottom = 398.0
 grow_horizontal = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_5alvr")
+theme_override_styles/panel = ExtResource("2_jngum")
 
 [node name="RETURN_SYMBOL" type="TextureRect" parent="MenuBox/RETURNTOGAME"]
 layout_mode = 1

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://buue1mh88br0u"
-path="res://.godot/imported/setsymb.png-13c0c0e6a75a6c610fd706eac2cd0f99.ctex"
+path="res://.godot/imported/setsymb.png-fae9122358b5a1753cf1cf79b9058282.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://files/game files/UI/UI_images/setsymb.png"
-dest_files=["res://.godot/imported/setsymb.png-13c0c0e6a75a6c610fd706eac2cd0f99.ctex"]
+source_file="res://files/game files/UI_V2/icons/setsymb.png"
+dest_files=["res://.godot/imported/setsymb.png-fae9122358b5a1753cf1cf79b9058282.ctex"]
 
 [params]
 
