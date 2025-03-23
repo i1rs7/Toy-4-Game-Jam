@@ -11,6 +11,10 @@ func _process(_delta: float) -> void:
 	pass
 
 
+func button_update(state: bool):
+	if state != initial_state: enable()
+	else: disable()
+
 
 func disable():
 	get_child(1).disabled = true
@@ -19,8 +23,8 @@ func disable():
 	
 
 func enable():
-	get_child(0).self_modulate.a = 1
 	get_child(1).disabled = false
+	get_child(0).self_modulate.a = 1
 
 func lower_door():
 	var counter = 1
