@@ -5,22 +5,26 @@ extends StaticBody2D
 @export var slow_open = false
 
 func _ready() -> void:
-	pass
+	if !initial_state: disable()
 
 func _process(_delta: float) -> void:
 	pass
 
 
+func button_update(state: bool):
+	if state != initial_state: enable()
+	else: disable()
+
 
 func disable():
-	get_child(1).disabled = true
 	if slow_open: lower_door()
 	else: get_child(0).self_modulate.a = 0.25
+	get_child(1).set_deferred("disabled", true)
 	
 
 func enable():
+	get_child(1).set_deferred("disabled", false)
 	get_child(0).self_modulate.a = 1
-	get_child(1).disabled = false
 
 func lower_door():
 	var counter = 1
