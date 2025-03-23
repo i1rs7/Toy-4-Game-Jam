@@ -1,6 +1,9 @@
 extends Control
 
 
+const LEVEL_SELECT_BUTTON = preload("res://files/game files/UI_V2/level select button.tscn")
+
+
 @onready var main_menu: Panel = $"AspectRatioContainer/MarginContainer/Main Menu"
 
 @onready var settings: Panel = $AspectRatioContainer/MarginContainer/Settings
@@ -10,14 +13,22 @@ extends Control
 
 
 
+func _ready() -> void:
+	load_level_buttons($"../Level Manager".num_levels)
 
+
+func load_level_buttons(levels: int):
+	for index in levels:
+		var button = LEVEL_SELECT_BUTTON.instantiate()
+		button.get_child(0).get_child(0).text = str(index + 1)
+		button.get_child(0).get_child(0).button_up.connect(	$"../Level Manager".load_level.bind(index + 1))
+		$"AspectRatioContainer/MarginContainer/Level Select/MarginContainer/VBoxContainer/GridContainer".add_child(button)
 
 
 
 func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("pause") and visible: hide()
 	elif Input.is_action_just_pressed("pause") and not visible: show()
-
 
 
 

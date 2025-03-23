@@ -21,6 +21,7 @@ shadow_color = Color(0.113363, 0.151691, 0.308936, 0.6)
 shadow_size = 4
 
 [node name="UI" type="Control"]
+visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -367,26 +368,11 @@ layout_mode = 2
 [node name="GridContainer" type="GridContainer" parent="AspectRatioContainer/MarginContainer/Level Select/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-
-[node name="AspectRatioContainer" type="AspectRatioContainer" parent="AspectRatioContainer/MarginContainer/Level Select/MarginContainer/VBoxContainer/GridContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-
-[node name="level button" type="PanelContainer" parent="AspectRatioContainer/MarginContainer/Level Select/MarginContainer/VBoxContainer/GridContainer/AspectRatioContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-theme_override_styles/panel = ExtResource("2_58y1d")
-
-[node name="1" type="Button" parent="AspectRatioContainer/MarginContainer/Level Select/MarginContainer/VBoxContainer/GridContainer/AspectRatioContainer/level button"]
-layout_mode = 2
-text = "1"
-flat = true
+columns = 2
 
 [node name="back" type="PanelContainer" parent="AspectRatioContainer/MarginContainer/Level Select/MarginContainer/VBoxContainer"]
 layout_mode = 2
-size_flags_vertical = 8
+size_flags_vertical = 10
 theme_override_styles/panel = ExtResource("2_58y1d")
 
 [node name="MarginContainer" type="MarginContainer" parent="AspectRatioContainer/MarginContainer/Level Select/MarginContainer/VBoxContainer/back"]
