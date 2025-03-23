@@ -5,7 +5,7 @@ extends StaticBody2D
 @export var slow_open = false
 
 func _ready() -> void:
-	pass
+	if !initial_state: disable()
 
 func _process(_delta: float) -> void:
 	pass
