@@ -15,7 +15,7 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.is_class("TileMapLayer"): return
 	if body == self: return
 	for element in connections:
-		get_node(element).state = true
+		get_node(element)
 
 func _on_area_2d_body_exited(_body: Node2D) -> void:
 	for element in connections:
