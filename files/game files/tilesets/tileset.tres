@@ -1,9 +1,9 @@
 [gd_resource type="TileSet" load_steps=3 format=3 uid="uid://cstrhkqdlqt1s"]
 
-[ext_resource type="Texture2D" uid="uid://bqb0w58dc32g2" path="res://files/game files/tilesets/final tileset image.tres" id="1_bkevq"]
+[ext_resource type="Texture2D" uid="uid://sxektg1i3vth" path="res://files/game files/tilesets/tileset image.png" id="1_j53gi"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_px3i6"]
-texture = ExtResource("1_bkevq")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_m8n4x"]
+texture = ExtResource("1_j53gi")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:0/0 = 0
@@ -75,4 +75,4 @@ texture = ExtResource("1_bkevq")
 
 [resource]
 physics_layer_0/collision_layer = 1
-sources/1 = SubResource("TileSetAtlasSource_px3i6")
+sources/0 = SubResource("TileSetAtlasSource_m8n4x")

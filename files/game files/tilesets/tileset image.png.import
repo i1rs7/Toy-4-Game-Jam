@@ -2,12 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bqb0w58dc32g2"
-valid=false
+uid="uid://sxektg1i3vth"
+path="res://.godot/imported/tileset image.png-1b9b4604b6ff6746ee615ed93dfb5271.ctex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 
-source_file="res://game files/prototype apply/tilesets/final tileset image.png"
+source_file="res://files/game files/tilesets/tileset image.png"
+dest_files=["res://.godot/imported/tileset image.png-1b9b4604b6ff6746ee615ed93dfb5271.ctex"]
 
 [params]
 
