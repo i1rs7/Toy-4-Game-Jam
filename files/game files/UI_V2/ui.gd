@@ -79,3 +79,7 @@ func _on_level_select_back_button_button_up() -> void:
 func _on_credits_back_button_button_up() -> void:
 	credits.hide()
 	main_menu.show()
+
+# RESTART BUTTON
+func _on_restart_button_button_up() -> void:
+	$"../Level Manager".restart_level()
