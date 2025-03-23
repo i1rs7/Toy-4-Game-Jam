@@ -19,7 +19,7 @@ func merge():
 	var oct = get_child(1)
 	var octocat = OCTOCAT.instantiate()
 	octocat.position = (cat.position+oct.position)/2
-	add_child(octocat)
+	call_deferred("add_child", octocat)
 	octocat.selected = true
 	octocat.key = cat.key or oct.key
 	if octocat.key : octocat.get_node("key").show()
