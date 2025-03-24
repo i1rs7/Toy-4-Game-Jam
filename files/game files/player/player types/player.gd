@@ -45,7 +45,7 @@ func handle_collisions():
 			collider.play_animation()
 		elif collider.is_in_group("flags"):
 			get_tree().root.get_child(0).find_child("Level Manager").load_next_level()
-			
+			await tree_exited
 			
 func player_animation():
 	if Input.get_axis("ui_left","ui_right") == 1:

@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=4 uid="uid://yd33codt26t2"]
+[gd_scene load_steps=8 format=4 uid="uid://yd33codt26t2"]
 
 [ext_resource type="TileSet" uid="uid://cstrhkqdlqt1s" path="res://files/game files/tilesets/tileset.tres" id="1_k3bfc"]
 [ext_resource type="PackedScene" uid="uid://mfvxnkfd0kye" path="res://files/game files/elements/scenes/door.tscn" id="2_68v8j"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://b67ugbbxevfx" path="res://files/game files/player/player manager.tscn" id="4_trwvh"]
 [ext_resource type="PackedScene" uid="uid://bxhs40jun86aa" path="res://files/game files/elements/scenes/flag.tscn" id="4_xj7tc"]
 [ext_resource type="PackedScene" uid="uid://bvrsb6iwj46bd" path="res://files/game files/elements/scenes/key.tscn" id="5_lgxcl"]
+[ext_resource type="PackedScene" uid="uid://b46k0xjmntdu2" path="res://files/game files/elements/scenes/sign.tscn" id="6_qlr0y"]
 
 [node name="Level4" type="Node2D"]
 
@@ -54,7 +55,7 @@ rotation = 1.5708
 scale = Vector2(1, 3)
 
 [node name="Button5" parent="Elements" instance=ExtResource("3_y6mx1")]
-position = Vector2(320, 90)
+position = Vector2(328, 88)
 connections = [NodePath("../Door3")]
 
 [node name="Door3" parent="Elements" instance=ExtResource("2_68v8j")]
@@ -71,7 +72,7 @@ scale = Vector2(4, 3)
 initial_state = false
 
 [node name="Flag" parent="Elements" instance=ExtResource("4_xj7tc")]
-position = Vector2(472, 280)
+position = Vector2(472, 281)
 
 [node name="Door5" parent="Elements" instance=ExtResource("2_68v8j")]
 position = Vector2(72, 232)
@@ -81,6 +82,10 @@ opened_by_key = true
 
 [node name="Key" parent="Elements" instance=ExtResource("5_lgxcl")]
 position = Vector2(520, 56)
+
+[node name="Sign" parent="Elements" instance=ExtResource("6_qlr0y")]
+position = Vector2(260, 88)
+text = "Buttons aren't always helpful..."
 
 [node name="PlayerManager" parent="." instance=ExtResource("4_trwvh")]
 position = Vector2(184, 67)
