@@ -1,56 +1,13 @@
-[gd_scene load_steps=11 format=3 uid="uid://dv3gfywqxkntg"]
+[gd_scene load_steps=5 format=3 uid="uid://dv3gfywqxkntg"]
 
 [ext_resource type="Script" path="res://files/game files/elements/scripts/button.gd" id="1_6xtfm"]
-[ext_resource type="Texture2D" uid="uid://dmt38v5wy1jpl" path="res://files/game files/elements/assets/item assets.png" id="2_wade6"]
+[ext_resource type="Texture2D" uid="uid://bsp860h33xu18" path="res://files/game files/elements/assets/button.png" id="2_2kxem"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nnjuc"]
 size = Vector2(8, 2)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6qyqq"]
 size = Vector2(12, 2)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_wjsg4"]
-atlas = ExtResource("2_wade6")
-region = Rect2(34, 17, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_g7bfw"]
-atlas = ExtResource("2_wade6")
-region = Rect2(51, 17, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_jlb1a"]
-atlas = ExtResource("2_wade6")
-region = Rect2(68, 17, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_di3i0"]
-atlas = ExtResource("2_wade6")
-region = Rect2(85, 17, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_0lsra"]
-atlas = ExtResource("2_wade6")
-region = Rect2(102, 17, 16, 16)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_d7fu7"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_wjsg4")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_g7bfw")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_jlb1a")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_di3i0")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_0lsra")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
 
 [node name="Button" type="StaticBody2D"]
 script = ExtResource("1_6xtfm")
@@ -66,8 +23,8 @@ shape = SubResource("RectangleShape2D_nnjuc")
 position = Vector2(0, -1)
 shape = SubResource("RectangleShape2D_6qyqq")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-sprite_frames = SubResource("SpriteFrames_d7fu7")
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_2kxem")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

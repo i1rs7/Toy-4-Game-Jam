@@ -9,7 +9,7 @@ func _ready() -> void:
 	$PanelContainer/MarginContainer/Label.text = text.replace("\\n", "\n")
 
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	pass
 
 
@@ -18,11 +18,9 @@ func _process(delta: float) -> void:
 
 func _on_body_entered(body: Node2D) -> void:
 	if body.is_class("TileMapLayer"): return
-	#print(body)
 	$PanelContainer.show()
 
 
 
-func _on_body_exited(body: Node2D) -> void:
-	#print(body)
+func _on_body_exited(_body: Node2D) -> void:
 	$PanelContainer.hide()
