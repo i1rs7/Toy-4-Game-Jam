@@ -27,25 +27,28 @@ func move(delta: float) -> void:
 
 
 func handle_collisions():
-	for index in get_slide_collision_count():
-		var collision = get_slide_collision(index)
-		if collision == null: continue
-		var collider = collision.get_collider()
+	#for index in get_slide_collision_count():
+		#var collision = get_slide_collision(index)
+		#if collision == null: continue
+		#var collider = collision.get_collider()
 		# Collision checks, I know its bad but here
-		if collider.is_in_group("doors") and key and collider.opened_by_key:
-			collider.disable()
-			key = false
-			get_node("key").hide()
-		elif collider.is_in_group("keys"):
-			collider.queue_free()
-			get_node("key").show()
-			key = true
-		elif collider.is_in_group("trampolines") and collider.state:
-			velocity.y = TRAMP_BOUNCE_VELOCITY
-			collider.play_animation()
-		elif collider.is_in_group("flags"):
-			get_tree().root.get_child(0).find_child("Level Manager").load_next_level()
-			await tree_exited
+	if get_last_slide_collision() == null: return
+	var collider = get_last_slide_collision().get_collider()
+	if collider.is_in_group("doors") and key and collider.opened_by_key:
+		collider.disable()
+		key = false
+		get_node("key").hide()
+	elif collider.is_in_group("keys"):
+		collider.queue_free()
+		get_node("key").show()
+		key = true
+	elif collider.is_in_group("trampolines") and collider.state:
+		velocity.y = TRAMP_BOUNCE_VELOCITY
+		collider.play_animation()
+	elif collider.is_in_group("flags"):
+		collider.queue_free()
+		get_tree().root.get_child(0).find_child("Level Manager").load_next_level()
+		await tree_exited
 			
 func player_animation():
 	if Input.get_axis("ui_left","ui_right") == 1:

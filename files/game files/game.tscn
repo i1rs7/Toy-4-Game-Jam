@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://dwtsylfvti68l"]
+[gd_scene load_steps=4 format=3 uid="uid://dwtsylfvti68l"]
 
 [ext_resource type="PackedScene" uid="uid://db8vjvo3v4mla" path="res://files/game files/UI_V2/ui.tscn" id="2_8omgj"]
 [ext_resource type="Script" path="res://files/game files/levels/level_manager.gd" id="2_c6yd4"]
+[ext_resource type="AudioStream" uid="uid://imqagqnyr7rk" path="res://files/game files/sounds/mobile-casual-video-game-music-158301.mp3" id="3_0wrf5"]
 
 [node name="Game" type="Node2D"]
 
@@ -17,3 +18,9 @@ offset_right = 576.0
 offset_bottom = 324.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
+
+[node name="music_player" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_0wrf5")
+autoplay = true
+max_distance = 1600.0
+parameters/looping = true

@@ -13,7 +13,7 @@ tile_set = ExtResource("1_4asj6")
 [node name="Elements" type="Node2D" parent="."]
 
 [node name="Sign" parent="Elements" instance=ExtResource("2_dm6lq")]
-position = Vector2(390, 280)
+position = Vector2(368, 280)
 text = "Thanks for Playing!"
 initial_state = true
 

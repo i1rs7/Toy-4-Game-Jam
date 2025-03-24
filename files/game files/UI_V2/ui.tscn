@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://db8vjvo3v4mla"]
+[gd_scene load_steps=8 format=3 uid="uid://db8vjvo3v4mla"]
 
 [ext_resource type="Script" path="res://files/game files/UI_V2/ui.gd" id="1_ovcgi"]
 [ext_resource type="StyleBox" uid="uid://d0i0r0f4k64rb" path="res://files/game files/UI_V2/styles/panel.tres" id="2_58y1d"]
@@ -20,8 +20,12 @@ corner_radius_bottom_left = 10
 shadow_color = Color(0.113363, 0.151691, 0.308936, 0.6)
 shadow_size = 4
 
+[sub_resource type="LabelSettings" id="LabelSettings_682mi"]
+font_size = 13
+
 [node name="UI" type="Control"]
 visible = false
+z_index = 2
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -240,10 +244,57 @@ layout_mode = 2
 [node name="title" type="Label" parent="AspectRatioContainer/MarginContainer/Settings/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 6
-text = "SETTINGS
-put sliders n stuff below this in the VBoxContainer"
+text = "SETTINGS"
 horizontal_alignment = 1
 autowrap_mode = 2
+
+[node name="volume" type="Label" parent="AspectRatioContainer/MarginContainer/Settings/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 10
+text = "Volume:"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="volume slider" type="PanelContainer" parent="AspectRatioContainer/MarginContainer/Settings/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 2
+theme_override_styles/panel = ExtResource("2_58y1d")
+
+[node name="MarginContainer" type="MarginContainer" parent="AspectRatioContainer/MarginContainer/Settings/MarginContainer/VBoxContainer/volume slider"]
+layout_mode = 2
+theme_override_constants/margin_left = 6
+theme_override_constants/margin_top = 3
+theme_override_constants/margin_right = 3
+theme_override_constants/margin_bottom = 3
+
+[node name="HSlider" type="HSlider" parent="AspectRatioContainer/MarginContainer/Settings/MarginContainer/VBoxContainer/volume slider/MarginContainer"]
+layout_mode = 2
+min_value = -35.0
+max_value = 18.0
+
+[node name="sound effects" type="Label" parent="AspectRatioContainer/MarginContainer/Settings/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 10
+text = "Sound Effects: (Nonfunctional)"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="sound effects slider" type="PanelContainer" parent="AspectRatioContainer/MarginContainer/Settings/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 2
+theme_override_styles/panel = ExtResource("2_58y1d")
+
+[node name="MarginContainer" type="MarginContainer" parent="AspectRatioContainer/MarginContainer/Settings/MarginContainer/VBoxContainer/sound effects slider"]
+layout_mode = 2
+theme_override_constants/margin_left = 6
+theme_override_constants/margin_top = 3
+theme_override_constants/margin_right = 3
+theme_override_constants/margin_bottom = 3
+
+[node name="HSlider" type="HSlider" parent="AspectRatioContainer/MarginContainer/Settings/MarginContainer/VBoxContainer/sound effects slider/MarginContainer"]
+layout_mode = 2
+min_value = -35.0
+max_value = 18.0
 
 [node name="back" type="PanelContainer" parent="AspectRatioContainer/MarginContainer/Settings/MarginContainer/VBoxContainer"]
 layout_mode = 2
@@ -365,6 +416,13 @@ theme_override_constants/margin_bottom = 20
 [node name="VBoxContainer" type="VBoxContainer" parent="AspectRatioContainer/MarginContainer/Level Select/MarginContainer"]
 layout_mode = 2
 
+[node name="title" type="Label" parent="AspectRatioContainer/MarginContainer/Level Select/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+text = "LEVEL SELECT"
+horizontal_alignment = 1
+autowrap_mode = 2
+
 [node name="GridContainer" type="GridContainer" parent="AspectRatioContainer/MarginContainer/Level Select/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
@@ -372,7 +430,7 @@ columns = 2
 
 [node name="restart level" type="PanelContainer" parent="AspectRatioContainer/MarginContainer/Level Select/MarginContainer/VBoxContainer"]
 layout_mode = 2
-size_flags_vertical = 10
+size_flags_vertical = 8
 theme_override_styles/panel = ExtResource("2_58y1d")
 
 [node name="MarginContainer" type="MarginContainer" parent="AspectRatioContainer/MarginContainer/Level Select/MarginContainer/VBoxContainer/restart level"]
@@ -455,20 +513,26 @@ layout_mode = 2
 
 [node name="title" type="Label" parent="AspectRatioContainer/MarginContainer/Credits/MarginContainer/VBoxContainer"]
 layout_mode = 2
-size_flags_vertical = 6
+size_flags_vertical = 0
 text = "CREDITS"
 horizontal_alignment = 1
 
 [node name="text" type="Label" parent="AspectRatioContainer/MarginContainer/Credits/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 6
-text = "put credits in this label "
+text = "Iris - Github Coordinator & Artist
+Kai - UI & Level Designer
+Jacob - Developer & Software Coordinator
+
+Kenney - Free asset library
+Piskel - Free sprite creation"
+label_settings = SubResource("LabelSettings_682mi")
 horizontal_alignment = 1
 autowrap_mode = 2
 
 [node name="back" type="PanelContainer" parent="AspectRatioContainer/MarginContainer/Credits/MarginContainer/VBoxContainer"]
 layout_mode = 2
-size_flags_vertical = 10
+size_flags_vertical = 8
 theme_override_styles/panel = ExtResource("2_58y1d")
 
 [node name="MarginContainer" type="MarginContainer" parent="AspectRatioContainer/MarginContainer/Credits/MarginContainer/VBoxContainer/back"]
@@ -503,6 +567,7 @@ flat = true
 [connection signal="button_up" from="AspectRatioContainer/MarginContainer/Main Menu/MarginContainer/VBoxContainer/level select/level_select_button" to="." method="_on_level_select_button_button_up"]
 [connection signal="button_up" from="AspectRatioContainer/MarginContainer/Main Menu/MarginContainer/VBoxContainer/credits/credits_button" to="." method="_on_credits_button_button_up"]
 [connection signal="button_up" from="AspectRatioContainer/MarginContainer/Main Menu/MarginContainer/VBoxContainer/resume/resume_button" to="." method="_on_resume_button_button_up"]
+[connection signal="value_changed" from="AspectRatioContainer/MarginContainer/Settings/MarginContainer/VBoxContainer/volume slider/MarginContainer/HSlider" to="." method="_on_h_slider_value_changed"]
 [connection signal="button_up" from="AspectRatioContainer/MarginContainer/Settings/MarginContainer/VBoxContainer/back/settings_back_button" to="." method="_on_settings_back_button_button_up"]
 [connection signal="button_up" from="AspectRatioContainer/MarginContainer/How To Play/MarginContainer/VBoxContainer/back/how_to_play_back_button" to="." method="_on_how_to_play_back_button_button_up"]
 [connection signal="button_up" from="AspectRatioContainer/MarginContainer/Level Select/MarginContainer/VBoxContainer/restart level/restart_button" to="." method="_on_restart_button_button_up"]

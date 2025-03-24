@@ -15,13 +15,14 @@ const LEVEL_SELECT_BUTTON = preload("res://files/game files/UI_V2/level select b
 
 func _ready() -> void:
 	load_level_buttons($"../Level Manager".num_levels)
+	
 
 
 func load_level_buttons(levels: int):
 	for index in levels:
 		var button = LEVEL_SELECT_BUTTON.instantiate()
 		button.get_child(0).get_child(0).text = str(index + 1)
-		button.get_child(0).get_child(0).button_up.connect(	$"../Level Manager".load_level.bind(index + 1))
+		button.get_child(0).get_child(0).button_up.connect($"../Level Manager".load_level.bind(index + 1))
 		$"AspectRatioContainer/MarginContainer/Level Select/MarginContainer/VBoxContainer/GridContainer".add_child(button)
 	$"AspectRatioContainer/MarginContainer/Level Select/MarginContainer/VBoxContainer/GridContainer".columns = floor(sqrt(levels))
 
@@ -61,6 +62,9 @@ func _on_resume_button_button_up() -> void:
 
 
 # SETTINGS BUTTON
+func _on_h_slider_value_changed(value: float) -> void:
+	$"../music_player".volume_db = value
+
 func _on_settings_back_button_button_up() -> void:
 	settings.hide()
 	main_menu.show()
