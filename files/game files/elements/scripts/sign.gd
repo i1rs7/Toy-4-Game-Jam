@@ -8,9 +8,9 @@ func _ready() -> void:
 	if !initial_state: $PanelContainer.hide()
 	$PanelContainer/MarginContainer/Label.text = text.replace("\\n", "\n")
 
-
 func _process(_delta: float) -> void:
 	pass
+
 
 
 
