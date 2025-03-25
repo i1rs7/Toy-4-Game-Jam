@@ -5,6 +5,8 @@ const OCTOCAT = preload("res://files/game files/player/player types/octocat.tscn
 const OCTOPUS = preload("res://files/game files/player/player types/octopus.tscn")
 
 
+
+
 var split_distance = 20
 
 func _ready() -> void:

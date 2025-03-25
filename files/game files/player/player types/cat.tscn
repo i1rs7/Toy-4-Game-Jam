@@ -1,8 +1,10 @@
-[gd_scene load_steps=21 format=3 uid="uid://dpqxu2y4owalb"]
+[gd_scene load_steps=23 format=3 uid="uid://dpqxu2y4owalb"]
 
 [ext_resource type="Script" path="res://files/game files/player/player types/player.gd" id="1_2s6qv"]
 [ext_resource type="Texture2D" uid="uid://deo8a4rwsrn28" path="res://files/game files/player/player_tilesheet.png" id="2_txp5u"]
 [ext_resource type="Texture2D" uid="uid://dmt38v5wy1jpl" path="res://files/game files/elements/assets/item assets.png" id="3_wim6q"]
+[ext_resource type="AudioStream" uid="uid://b5o3nm0ugnxrk" path="res://files/game files/SFX/money-pickup-2-89563.mp3" id="4_sacg2"]
+[ext_resource type="AudioStream" uid="uid://dtwv0eshdcpgr" path="res://files/game files/SFX/clank1-91862.mp3" id="5_mhh1u"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4vup7"]
 size = Vector2(28, 26)
@@ -154,6 +156,12 @@ visible = false
 position = Vector2(2.38419e-07, -20)
 scale = Vector2(0.798077, 0.759615)
 sprite_frames = SubResource("SpriteFrames_1n25r")
+
+[node name="KeyCollect" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_sacg2")
+
+[node name="DoorOpen" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_mhh1u")
 
 [connection signal="ready" from="." to="." method="_on_ready"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
