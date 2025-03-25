@@ -22,6 +22,8 @@ func load_next_level():
 	await get_child(0).tree_exited
 	add_child(levels[current_level].instantiate())
 	current_level += 1
+	if current_level == 6:
+		$"../UI".force_credits()
 
 func load_level(num: int):
 	current_level = num - 1

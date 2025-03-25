@@ -26,7 +26,10 @@ func load_level_buttons(levels: int):
 		$"AspectRatioContainer/MarginContainer/Level Select/MarginContainer/VBoxContainer/GridContainer".add_child(button)
 	$"AspectRatioContainer/MarginContainer/Level Select/MarginContainer/VBoxContainer/GridContainer".columns = floor(sqrt(levels))
 
-
+func force_credits():
+	show()
+	main_menu.hide()
+	credits.show()
 
 func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("pause") and visible:
